@@ -1,0 +1,36 @@
+{
+  "name": "shellx-v3",
+  "displayName": "ShellX V3",
+  "description": "Cognitive Developer Engine integration for VS Code.",
+  "version": "3.0.0",
+  "publisher": "shellx",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:shellx.run"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "shellx.run",
+        "title": "Run ShellX Command"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "ShellX Settings",
+      "properties": {
+        "shellx.enableCognitiveMode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable ShellX V3 cognitive reporting."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "dependencies": {}
+}
