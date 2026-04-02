@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShellX — Cognitive Developer Engine</title>
+    <meta name="description" content="Human-Readable Intelligence for Code, Diagnostics & Automation">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Password Gate -->
+    <div id="password-gate">
+        <div class="gate-content">
+            <div class="feature-icon">🔐</div>
+            <h2>Private Access</h2>
+            <p>Enter access code to view ShellX documentation</p>
+            <input type="password" id="gate-password" class="gate-input" placeholder="Enter code..." autofocus>
+            <button class="btn btn-primary" onclick="checkPassword()">Access Site</button>
+            <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">
+                Hint: cognitive-engine-2026
+            </p>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">⚡ ShellX</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="docs/quickstart.html">Docs</a></li>
+                <li><a href="docs/commands.html">Commands</a></li>
+                <li><a href="pro/license.html">Pro</a></li>
+                <li><a href="https://github.com/jimgranitex-eng/Shellx" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">v3.0 Cognitive Engine</div>
+            <h1>ShellX</h1>
+            <p class="hero-subtitle">
+                The Cognitive Developer Engine. Human-readable intelligence for code, 
+                diagnostics, and automation. Transform complexity into clarity.
+            </p>
+            <div>
+                <a href="docs/quickstart.html" class="btn btn-primary">Get Started →</a>
+                <a href="https://github.com/jimgranitex-eng/Shellx" class="btn btn-secondary" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                    <span style="margin-left: auto; color: var(--text-muted); font-size: 0.8rem;">bash — 80x24</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">shellx --xx "Fix the rendering pipeline and stabilize the engine"</span>
+                    </div>
+                    <div class="terminal-line output">
+                        🔍 Analyzing intent...<br>
+                        🧠 Running cognitive pipeline...<br>
+                        ✅ Complete
+                    </div>
+                    <div class="terminal-line" style="margin-top: 1rem; color: var(--text-primary);">
+                        1. <strong>What you wanted:</strong> Fix rendering pipeline & stabilize<br>
+                        2. <strong>What ShellX did:</strong> Deep audit → Debug → Autofix → Verify<br>
+                        3. <strong>What changed:</strong> 12 files modified, 3 stones created
+                    </div>
+                    <div class="terminal-line" style="margin-top: 1rem;">
+                        <span class="prompt">$</span>
+                        <span class="animate-pulse" style="color: var(--accent-primary);">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2>Cognitive Architecture</h2>
+                <p>Built for developers who think in systems, not syntax.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Cognitive Mode (V3)</h3>
+                    <p>Natural language intent extraction. Just describe what you need. ShellX understands context, runs the pipeline, and delivers a clean 1-2-3 summary.</p>
+                    <code style="font-size: 0.8rem;">shellx --xx "your intent here"</code>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🦸</div>
+                    <h3>Superman Mode</h3>
+                    <p>All-systems diagnostic engine. Deep audit, debug, architect analysis, memory updates, safe autofix, verification, and stone creation in one command.</p>
+                    <code style="font-size: 0.8rem;">shellx-superman "audit everything"</code>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧬</div>
+                    <h3>LinkX Memory</h3>
+                    <p>A living timeline of your project's evolution. Stores intent, actions, changes, diffs, and timestamps. Searchable, browsable, persistent.</p>
+                    <code style="font-size: 0.8rem;">shellx linkx timeline</code>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🪨</div>
+                    <h3>Stones</h3>
+                    <p>Immutable recovery snapshots. Every operation creates a stone with full state, diffs, and reversibility. Your safety net for bold changes.</p>
+                    <code style="font-size: 0.8rem;">shellx stone restore &lt;id&gt;</code>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Multi-Agent Pipeline</h3>
+                    <p>Smart input → Deep audit → Debug → Architect → Memory → Autofix → Verify. Each worker specializes. Together they orchestrate.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔮</div>
+                    <h3>V4 Roadmap</h3>
+                    <p>Plugin system, worker registry, cloud LinkX timeline, Stone diff viewer, VS Code panels, and ShellX Pro modules coming soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2>How It Works</h2>
+                <p style="margin-bottom: 3rem;">From intent to implementation in 7 steps.</p>
+
+                <div style="display: grid; gap: 1.5rem; text-align: left;">
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="background: var(--accent-primary); color: var(--bg-primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">You Type Natural Language</h4>
+                            <p style="margin: 0;">Describe what you want in plain English. No memorizing flags or syntax.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="background: var(--accent-primary); color: var(--bg-primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Intent Extraction</h4>
+                            <p style="margin: 0;">The cognitive engine parses context, goals, and constraints from your message.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="background: var(--accent-primary); color: var(--bg-primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Pipeline Execution</h4>
+                            <p style="margin: 0;">Specialized workers run in parallel: audit, debug, architect, memory, autofix.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="background: var(--accent-primary); color: var(--bg-primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Compression & Summary</h4>
+                            <p style="margin: 0;">Complex outputs are distilled into a clean 1-2-3 summary you can read in 10 seconds.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="background: var(--accent-primary); color: var(--bg-primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Persistent Reports</h4>
+                            <p style="margin: 0;">Full technical reports saved to <code>.reports/</code> for deep dives when needed.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="background: var(--accent-primary); color: var(--bg-primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">6</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">LinkX Updates</h4>
+                            <p style="margin: 0;">Your project timeline grows. Searchable history of every decision and change.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="background: var(--accent-primary); color: var(--bg-primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">7</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Stone Creation</h4>
+                            <p style="margin: 0;">A recoverable snapshot is minted. Experiment fearlessly. Rollback instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2>Ready to Transform Your Workflow?</h2>
+            <p style="margin-bottom: 2rem;">Join the cognitive revolution. Install ShellX today.</p>
+            <div class="terminal" style="max-width: 600px; margin: 2rem auto; text-align: left;">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">git clone https://github.com/jimgranitex-eng/Shellx.git</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">cd Shellx && ./install.sh</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">shellx --xx "Hello, cognitive engine"</span>
+                    </div>
+                </div>
+            </div>
+            <a href="docs/quickstart.html" class="btn btn-primary" style="margin-top: 1rem;">Read the Quickstart →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="docs/quickstart.html">Documentation</a>
+                <a href="docs/commands.html">Commands</a>
+                <a href="pro/license.html">Commercial License</a>
+                <a href="https://github.com/jimgranitex-eng/Shellx" target="_blank">GitHub</a>
+            </div>
+            <p>© 2026 ShellX — Part of the KickerOS ecosystem. Created by James.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                Open source under GPL-3.0. Commercial licenses available.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
