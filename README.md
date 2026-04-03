@@ -1,8 +1,31 @@
-# Shellx
- ShellX Autofixer System — Full Multi‑Mode Package, Provides Template Mode, Command Mode, and Full Autofixer Engine for one‑pass automated fixing inside vs coder on any project. 
-No jargon, no over‑engineering. Just **how ShellX is actually used** in real life.
+# ⚡ ShellX — Cognitive Developer Engine
 
-And I’ll explain it in the context of **ShellX V1 → V2 → V3**, because your system evolved through those phases.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-3.0.0-brightgreen.svg)](https://github.com/jimgranitex-eng/Shellx/releases)
+[![GitHub Stars](https://img.shields.io/github/stars/jimgranitex-eng/Shellx?style=social)](https://github.com/jimgranitex-eng/Shellx/stargazers)
+
+> Human‑readable intelligence for code, diagnostics, and automation.
+
+ShellX is a cognitive developer engine that transforms complex developer workflows into simple, actionable intelligence. One command. Full pipeline. Clean summary.
+
+---
+
+## ✨ ShellX Pro — Commercial Edition
+
+ShellX Pro includes advanced modules not available in the open‑source edition:
+
+- 🦸 **Superman Pro** — Enhanced deep diagnostics & multi-threaded verification
+- 🧩 **Advanced multi-agent workers** — `architect-pro`, `memory-pro`, `deep-audit-pro`, `autofix-pro`, `verify-pro`
+- 🧬 **Enterprise LinkX timeline** — Multi-project memory graph with diff visualization
+- 🪨 **Stone diff viewer** — Visual snapshot comparison & time-travel debugging
+- 🖥 **VS Code interactive panels** — Live diagnostics, worker dashboards, timeline viewer
+- 🛡 **Priority support** — Direct access to the creator
+- 🚀 **Early access to V4 modules**
+
+See [LICENSE-PRO.md](LICENSE-PRO.md) for commercial licensing terms and [docs/Pro-Pricing.md](docs/Pro-Pricing.md) for plans and pricing.
+
+**[➡ Buy ShellX Pro via GitHub Sponsors](https://github.com/sponsors/jimgranitex-eng)**  
+**Enterprise inquiries:** open an issue or see [docs/Pro-Enterprise.md](docs/Pro-Enterprise.md)
 
 ---
 
@@ -141,3 +164,16 @@ The difference is **how much detail you want**.
 **ShellX is used by typing a command and a message — ShellX does the work, then tells you what happened in a clean, human‑readable summary.**
 
 ---
+
+---
+
+## 🔍 Topics
+
+`shellx` · `developer-tools` · `ai-engine` · `cognitive-engine` · `multi-agent` · `diagnostics` · `automation` · `workflow`
+
+---
+
+## 📄 License
+
+ShellX (open source) is licensed under the [GNU GPL v3](LICENSE).  
+ShellX Pro is licensed under a commercial license — see [LICENSE-PRO.md](LICENSE-PRO.md).
