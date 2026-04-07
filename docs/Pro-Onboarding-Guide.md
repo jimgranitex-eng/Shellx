@@ -47,9 +47,9 @@ shellx pro status
 
 ## 4. Clone the Pro Repository
 
-You'll be granted access to:
+You'll be granted access to a private Pro repository after purchase. The URL and access instructions will be emailed to you. Clone it with:
 ```bash
-git clone https://github.com/YOURNAME/ShellX-Pro
+git clone https://github.com/jimgranitex-eng/ShellX-Pro
 ```
 
 Follow the README there for any Pro-specific setup.
