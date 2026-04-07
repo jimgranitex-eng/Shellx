@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickstart — ShellX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">⚡ ShellX</a>
+            <ul class="nav-links">
+                <li><a href="quickstart.html" class="active">Quickstart</a></li>
+                <li><a href="commands.html">Commands</a></li>
+                <li><a href="../pro/license.html">License</a></li>
+                <li><a href="https://github.com/jimgranitex-eng/Shellx" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <aside class="sidebar">
+            <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Quickstart</h3>
+            <ul class="sidebar-nav">
+                <li><a href="#prerequisites">Prerequisites</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#v1">V1 — Simple Mode</a></li>
+                <li><a href="#v2">V2 — Superman Mode</a></li>
+                <li><a href="#v3">V3 — Cognitive Mode</a></li>
+                <li><a href="#output">Output Structure</a></li>
+                <li><a href="#pro">ShellX Pro</a></li>
+                <li><a href="#next">Next Steps</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1>Quickstart Guide</h1>
+            <p class="lead" style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                Get up and running with ShellX in under 5 minutes.
+            </p>
+
+            <h2 id="prerequisites">Prerequisites</h2>
+            <ul>
+                <li>Node.js 18+</li>
+                <li>Git</li>
+                <li>A terminal</li>
+            </ul>
+
+            <h2 id="installation">Installation</h2>
+
+            <h3>Option 1 — Clone from GitHub</h3>
+            <pre><code>git clone https://github.com/jimgranitex-eng/Shellx.git
+cd Shellx
+npm install</code></pre>
+
+            <h3>Option 2 — Global install (coming soon)</h3>
+            <pre><code>npm install -g shellx</code></pre>
+
+            <h2 id="v1">V1 — Simple Report</h2>
+            <p>The original ShellX interface. Pass a message and get a structured report.</p>
+
+            <div class="terminal" style="margin: 1.5rem 0;">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">shellx "Fix the shader logic and update the color pipeline."</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>What it does:</p>
+            <ul>
+                <li>Reads your message</li>
+                <li>Executes the task</li>
+                <li>Generates a timestamped report</li>
+                <li>Saves it to your project</li>
+            </ul>
+
+            <h2 id="v2">V2 — Superman Mode</h2>
+            <p>All-systems diagnostic engine. Runs the complete 9-worker pipeline.</p>
+
+            <div class="terminal" style="margin: 1.5rem 0;">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">shellx-superman "audit everything and stabilize the engine"</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>What it does:</p>
+            <ol>
+                <li>Deep audit</li>
+                <li>Architecture mapping</li>
+                <li>Memory analysis</li>
+                <li>Safe-mode autofix</li>
+                <li>Verification pipeline</li>
+                <li>Stone creation</li>
+                <li>LinkX update</li>
+            </ol>
+
+            <h2 id="v3">V3 — Cognitive Mode (Recommended)</h2>
+            <p>The flagship natural language interface. Describe what you want, get results.</p>
+
+            <div class="terminal" style="margin: 1.5rem 0;">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">shellx --xx "Fix the rendering pipeline and update the shader logic."</span>
+                    </div>
+                    <div class="terminal-line output" style="margin-top: 0.75rem;">
+                        🔍 Analyzing intent...<br>
+                        🧠 Running cognitive pipeline...<br>
+                        ✅ Complete
+                    </div>
+                    <div class="terminal-line" style="margin-top: 1rem; color: var(--text-primary);">
+                        1. <strong>What you wanted:</strong> Fix rendering pipeline & update shaders<br>
+                        2. <strong>What ShellX did:</strong> Deep audit → Debug → Autofix → Verify<br>
+                        3. <strong>What changed:</strong> 8 files modified, 1 stone created
+                    </div>
+                </div>
+            </div>
+
+            <p>The output is always a clean 1-2-3 summary. Human-readable. No noise.</p>
+
+            <h2 id="output">Output Structure</h2>
+            <p>Every run produces:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Output</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Report</td>
+                        <td><code>reports/YYYY-MM-DD-HH-MM-SS.md</code></td>
+                    </tr>
+                    <tr>
+                        <td>Stone snapshot</td>
+                        <td><code>stones/stone-YYYY-MM-DD.json</code></td>
+                    </tr>
+                    <tr>
+                        <td>LinkX update</td>
+                        <td><code>linkx/timeline.json</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="pro">ShellX Pro</h2>
+            <p>To unlock advanced features, obtain a commercial license and activate it:</p>
+
+            <pre><code>shellx activate SHELLX-PRO-XXXX-XXXX-XXXX</code></pre>
+
+            <p>Pro unlocks: closed-source distribution rights, priority support, cloud LinkX, Stone Vault, and all Pro modules.</p>
+
+            <div style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(0, 212, 255, 0.1)); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
+                <h3 style="margin-bottom: 0.5rem;">Ready to upgrade?</h3>
+                <p style="margin-bottom: 1.5rem;">See commercial licensing terms and pricing.</p>
+                <a href="../pro/license.html" class="btn btn-primary">View Pro License →</a>
+            </div>
+
+            <h2 id="next">Next Steps</h2>
+            <ul>
+                <li><a href="commands.html">Commands Reference</a> — Full list of ShellX commands</li>
+                <li><a href="../pro/license.html">Commercial License</a> — Pro edition licensing</li>
+                <li><a href="https://github.com/jimgranitex-eng/Shellx" target="_blank">GitHub Repository</a> — Source code and contributions</li>
+            </ul>
+        </main>
+    </div>
+
+    <footer style="margin-top: 0;">
+        <div class="container">
+            <p>© 2026 ShellX — Part of the KickerOS ecosystem</p>
+        </div>
+    </footer>
+</body>
+</html>
