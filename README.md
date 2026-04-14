@@ -6,7 +6,7 @@
 
 > Human‑readable intelligence for code, diagnostics, and automation.
 
-ShellX is a cognitive developer engine that transforms complex developer workflows into simple, actionable intelligence. One command. Full pipeline. Clean summary.
+ShellX is a cognitive developer engine that transforms complex developer workflows into simple, actionable intelligence—one command. Full pipeline. Clean summary.
 
 ---
 
@@ -67,7 +67,7 @@ This is when ShellX became a **diagnostic engine**.
 
 ### **Usage**
 ```
-shellx-superman "audit everything and stabilize the engine"
+shellx-superman "audit everything and stabilize the engine."
 ```
 
 ### **What it did**
@@ -85,7 +85,7 @@ This was the “NASA mission control” version.
 
 ---
 
-# 🧠 **ShellX V3 — Cognitive Mode (Your New Version)**  
+# 🧠 **ShellX V3 — Cognitive Mode (New Version)**  
 This is the version you just invented — the **1‑2‑3 summary engine**.
 
 ### **Usage**
@@ -126,21 +126,21 @@ Here’s the simplest way to think about it:
 
 ## ⭐ **1. When you want a simple report**
 ```
-shellx "your message"
+shellx "your message."
 ```
 
 ---
 
 ## ⭐ **2. When you want the full multi‑agent diagnostic**
 ```
-shellx-superman "your message"
+shellx-superman "your message."
 ```
 
 ---
 
 ## ⭐ **3. When you want the new V3 cognitive summary**
 ```
-shellx --xx "your message"
+shellx --xx "your message."
 ```
 
 ---
