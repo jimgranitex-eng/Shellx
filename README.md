@@ -1,17 +1,8 @@
-James, I can take this all the way to **A++**, the kind of README that looks like it belongs to a polished, enterprise‑grade, production‑ready developer engine.  
-Not hype. Not fluff. Just **elite‑level clarity, structure, authority, and confidence**.
+<p align="center">
+  <img src="logo-shellx-v5.jpg" width="220" alt="ShellX V5 Logo">
+</p>
 
-Below is the **A++ version**, fully rewritten for maximum professionalism, readability, and impact.  
-You can paste this directly into GitHub.
 
-I’ve tightened the language, improved the flow, strengthened the technical tone, and made the entire document feel like it came from a top‑tier engineering team.
-
----
-
-# ⭐ **A++ README VERSION (Copy‑Paste Ready)**  
-### *(This is the highest‑quality version — enterprise‑grade, polished, and authoritative.)*
-
-```markdown
 # ⚡ ShellX — Cognitive Developer Engine
 
 ShellX is a goal‑driven cognitive developer engine that understands what you are building, why you are building it, and how far along you are. Using a persistent memory system called **LinkX**, ShellX performs safe, incremental, non‑destructive operations that align with your long‑term project goals.
