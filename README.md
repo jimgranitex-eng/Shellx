@@ -1,6 +1,7 @@
 <p align="center">
   <img src="logo-shellx-v5.jpg" width="220" alt="ShellX V5 Logo">
 </p>
+<p align="center"><em>Goal‑Driven Cognitive Developer Engine</em></p>
 
 
 # ⚡ ShellX — Cognitive Developer Engine
