@@ -6,108 +6,138 @@ Get up and running with ShellX in under 5 minutes.
 
 ## Prerequisites
 
-- Node.js 18+ (or your preferred runtime)
-- Git
+- Node.js 16+
+- npm
 - A terminal
+- A Git project (recommended)
 
 ---
 
 ## Installation
 
-### Option 1 — Clone from GitHub
+### Option 1 — Global Install
+
+```bash
+npm install -g shellx-dev-cli
+```
+
+### Option 2 — Local Development
 
 ```bash
 git clone https://github.com/jimgranitex-eng/Shellx.git
 cd Shellx
 npm install
+node bin/shellx.js --version
 ```
 
-### Option 2 — Global install (coming soon)
+### Option 3 — npm link
 
 ```bash
-npm install -g shellx
+npm link
+shellx --version
 ```
 
 ---
 
-## Basic Usage
+## First Steps
 
-### V1 — Simple Report
+### 1. Initialize ShellX
 
 ```bash
-shellx "Fix the shader logic and update the color pipeline."
+shellx init
 ```
 
-What it does:
-- Reads your message
-- Executes the task
-- Generates a timestamped report
-- Saves it to your project
+This creates:
+- `.linkx/` — LinkX memory system
+- `.reports/` — Generated reports
+- `.stones/` — Snapshot checkpoints
+
+### 2. Initialize LinkX
+
+```bash
+shellx linkx init
+```
+
+### 3. Verify Installation
+
+```bash
+shellx verify
+```
+
+You should see all checks pass.
 
 ---
 
-### V2 — Multi-Agent Diagnostic (Superman)
+## Core Commands
+
+### Cognitive Mode
 
 ```bash
-shellx-superman "audit everything and stabilize the engine"
+shellx --xx "analyze the project structure"
 ```
 
-What it does:
-- Deep audit
-- Architecture mapping
-- Memory analysis
-- Safe-mode autofix
-- Verification pipeline
-- Stone creation
-- LinkX update
+### LinkX Commands
+
+```bash
+shellx linkx scan
+shellx linkx show
+shellx linkx timeline
+```
+
+### Reports
+
+```bash
+shellx report
+shellx report --format detailed
+shellx report --format full
+```
+
+Reports are saved to `.reports/`.
 
 ---
 
-### V3 — Cognitive Mode (Recommended)
+## Workflow Example
 
 ```bash
-shellx --xx "Fix the rendering pipeline and update the shader logic."
+shellx init
+shellx linkx init
+shellx --xx "Refactor the authentication module for better performance"
+shellx linkx show
+shellx report
+shellx linkx timeline
 ```
-
-What you see:
-
-```
-1. What you wanted
-2. What ShellX did
-3. What changed
-```
-
-With checkmarks. Clean. Human-readable.
 
 ---
 
 ## Output Structure
 
-Every run produces:
-
 | Output | Location |
 |--------|----------|
-| Report | `reports/YYYY-MM-DD-HH-MM-SS.md` |
-| Stone snapshot | `stones/stone-YYYY-MM-DD.json` |
-| LinkX update | `linkx/timeline.json` |
+| Reports | `.reports/` |
+| Stones | `.stones/` |
+| LinkX Memory | `.linkx/core.json` |
 
 ---
 
-## ShellX Pro
+## Troubleshooting
 
-To unlock advanced features, see [Pro-Pricing.md](Pro-Pricing.md) and [Pro-Activation-System.md](Pro-Activation-System.md).
-
-Once you have a license key:
+### `shellx: command not found`
 
 ```bash
-shellx activate SHELLX-PRO-XXXX-XXXX-XXXX
+npm install -g shellx-dev-cli
+```
+
+### LinkX not initialized
+
+```bash
+shellx init
+shellx linkx init
 ```
 
 ---
 
 ## Next Steps
 
-- [Commands Reference](../shellx-website/docs/commands.html)
+- [Commands](../shellx-website/docs/commands.html)
 - [Pro Features](Pro-Features.md)
-- [Pro FAQ](Pro-FAQ.md)
 - [Contributing](../CONTRIBUTING.md)
