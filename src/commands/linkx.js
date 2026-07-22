@@ -19,12 +19,25 @@ function saveLinkX(data) {
 function countTrackedFiles(dir) {
   const ignored = new Set(['.git', 'node_modules', '.linkx', '.reports', '.stones']);
   let total = 0;
-  const entries = readdirSync(dir);
+  let entries = [];
+
+  try {
+    entries = readdirSync(dir);
+  } catch (error) {
+    console.warn(`⚠️ Skipping unreadable directory: ${dir}`);
+    return total;
+  }
 
   for (const entry of entries) {
     if (ignored.has(entry)) continue;
     const fullPath = join(dir, entry);
-    const stats = statSync(fullPath);
+    let stats;
+    try {
+      stats = statSync(fullPath);
+    } catch (error) {
+      console.warn(`⚠️ Skipping inaccessible path: ${fullPath}`);
+      continue;
+    }
 
     if (stats.isDirectory()) {
       total += countTrackedFiles(fullPath);

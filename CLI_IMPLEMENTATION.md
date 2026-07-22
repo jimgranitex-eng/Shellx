@@ -123,6 +123,6 @@ Because now there is a **real, working product** behind the brand.
 ### Support
 
 For issues, questions, or enhancements:
-1. Check `.github/CONTRIBUTING.md`
+1. Check `CONTRIBUTING.md`
 2. Open an issue on GitHub
 3. Submit a PR with tests
