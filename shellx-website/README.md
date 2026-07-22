@@ -2,6 +2,22 @@
 
 Private documentation and landing page for ShellX.
 
+## CLI Alignment
+
+The website documentation should match the published CLI package and commands:
+
+```bash
+npm install -g shellx-dev-cli
+shellx init
+shellx linkx init
+shellx linkx scan
+shellx linkx show
+shellx linkx timeline
+shellx verify
+shellx report
+shellx --xx "your intent here"
+```
+
 ## Deployment
 
 ### GitHub Pages

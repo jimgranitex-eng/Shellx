@@ -1,5 +1,5 @@
 {
-  "name": "shellx-cli",
+  "name": "shellx-dev-cli",
   "version": "3.0.0",
   "description": "ShellX — Cognitive Developer Engine. Goal-driven automation with persistent memory (LinkX). Analyzes code, preserves intent, performs safe incremental fixes.",
   "type": "module",

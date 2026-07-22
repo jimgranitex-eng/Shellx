@@ -14,6 +14,18 @@ const __dirname = dirname(__filename);
 const packageJson = JSON.parse(readFileSync(join(__dirname, '../package.json'), 'utf8'));
 
 export async function runShellX() {
+  const args = process.argv.slice(2);
+  if (args[0] === '--xx') {
+    const intent = args.slice(1).join(' ').trim();
+    if (!intent) {
+      console.error('❌ Missing intent. Usage: shellx --xx "your intent here"');
+      process.exitCode = 1;
+      return;
+    }
+    await cognitiveMode(intent);
+    return;
+  }
+
   program
     .name('shellx')
     .description('ShellX — Cognitive Developer Engine')
@@ -63,12 +75,6 @@ export async function runShellX() {
     .description('Generate ShellX diagnostic report')
     .option('-f, --format <type>', 'Report format (summary|detailed|full)', 'summary')
     .action(reportCommand);
-
-  // Cognitive mode
-  program
-    .command('--xx <intent>')
-    .description('Cognitive mode: natural language intent processing')
-    .action((intent) => cognitiveMode(intent));
 
   // Parse arguments
   program.parse(process.argv);

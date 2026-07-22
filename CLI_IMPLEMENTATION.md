@@ -81,7 +81,7 @@ npm run publish-prod
 
 #### 5. Users can install globally
 ```bash
-npm install -g shellx
+npm install -g shellx-dev-cli
 shellx --version
 shellx init
 ```
