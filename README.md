@@ -1,14 +1,6 @@
-<p align="center">
-  <img src="logo-shellx-v5.jpg" width="220" alt="ShellX V5 Logo">
-</p>
-<p align="center"><em>Goal‑Driven Cognitive Developer Engine</em></p>
-<p align="center">
-  <img src="shellx-banner.png" width="100%" alt="ShellX Banner">
-</p>
+# ShellX — Cognitive Developer Engine
 
-# ⚡ ShellX — Cognitive Developer Engine
-
-**ShellX is a goal-driven cognitive developer engine** that understands what you are building, why you are building it, and how far along you are. Using a persistent memory system called **LinkX**, ShellX transforms developer workflows into structured, traceable output.
+ShellX is a goal-driven cognitive developer engine that helps you understand what you're building, why you're building it, and how far along you are. It uses a persistent memory system called **LinkX** to produce safe, incremental, traceable operations.
 
 ## Install
 
@@ -39,10 +31,9 @@ All from a single command.
 
 ---
 
-# Core Concepts
+## Core Concepts
 
-## Triple-Context Engine
-
+### Triple-Context Engine
 ShellX evaluates every request using three layers of context:
 
 1. **Immediate Intent** — what you asked for
@@ -51,8 +42,7 @@ ShellX evaluates every request using three layers of context:
 
 ShellX reconciles all three before taking action, ensuring correctness, continuity, and safety.
 
-## LinkX — Core Memory System
-
+### LinkX — Core Memory System
 LinkX is the primary memory and goal engine of ShellX.
 ShellX boots on top of LinkX and relies on it for context-aware execution.
 
@@ -68,8 +58,7 @@ LinkX stores:
 
 If LinkX is unavailable, ShellX enters safe mode and refuses destructive operations.
 
-## Builder Mode
-
+### Builder Mode
 ShellX performs safe, incremental modifications:
 
 - Adds
@@ -79,8 +68,7 @@ ShellX performs safe, incremental modifications:
 
 ShellX does not overwrite, replace, destroy, misplace, or duplicate unless explicitly instructed.
 
-## Superman Mode
-
+### Superman Mode
 Superman orchestrates workers and performs deep diagnostics:
 
 - Loads LinkX
@@ -95,9 +83,7 @@ Superman is powerful, precise, and goal-aware.
 
 ---
 
-# Getting Started
-
-## Installation
+## Getting Started
 
 ### Global install
 
@@ -168,7 +154,7 @@ shellx --xx "Fix the rendering pipeline and optimize the shader system"
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```
 .
@@ -189,19 +175,19 @@ shellx --xx "Fix the rendering pipeline and optimize the shader system"
 
 ---
 
-# License
+## License
 
 - Open source: [GNU GPL v3](LICENSE)
 - Commercial: [LICENSE-PRO.md](LICENSE-PRO.md)
 
 ---
 
-# Contributing
+## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
-# In One Sentence
+## In One Sentence
 
 **ShellX is a cognitive developer engine that preserves long-term project goals, analyzes your codebase, and performs safe, incremental operations using a persistent memory system called LinkX.**
