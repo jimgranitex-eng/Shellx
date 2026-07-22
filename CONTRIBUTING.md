@@ -1,97 +1,115 @@
 # Contributing to ShellX
 
-Thank you for your interest in contributing to ShellX! 🎉
+Thank you for your interest in contributing to ShellX.
 
-ShellX is an open-source cognitive developer engine licensed under GPL-3.0. We welcome contributions that improve the core engine, workers, documentation, and tooling.
-
----
-
-## 📋 Table of Contents
-
-- [Code of Conduct](#code-of-conduct)
-- [How to Contribute](#how-to-contribute)
-- [Development Setup](#development-setup)
-- [Submitting Changes](#submitting-changes)
-- [Reporting Issues](#reporting-issues)
-- [Style Guidelines](#style-guidelines)
+ShellX is an open-source cognitive developer engine licensed under GPL-3.0. Contributions that improve the CLI, docs, website, or tooling are welcome.
 
 ---
 
-## Code of Conduct
+## Getting Started
 
-Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md). We are committed to keeping this project welcoming and respectful for everyone.
+```bash
+git clone https://github.com/jimgranitex-eng/Shellx.git
+cd Shellx
+npm install
+```
+
+For global CLI usage during verification:
+
+```bash
+npm install -g shellx-dev-cli
+shellx --version
+```
+
+### Test the CLI
+
+```bash
+node bin/shellx.js --version
+node bin/shellx.js init
+node bin/shellx.js linkx init
+node bin/shellx.js linkx show
+node bin/shellx.js --xx "test"
+```
 
 ---
 
 ## How to Contribute
 
-### 🐛 Bug Fixes
-1. Check if the issue already exists in [Issues](https://github.com/jimgranitex-eng/Shellx/issues).
-2. If not, open a new issue describing the bug clearly.
-3. Fork the repo, create a branch (`fix/short-description`), and submit a Pull Request.
+### Bug Fixes
 
-### ✨ New Features
-1. Open an issue first to discuss the feature before building it.
-2. Label it `enhancement` and describe the use case.
-3. Fork the repo, create a branch (`feature/short-description`), and submit a PR.
+1. Check existing issues.
+2. Open a new issue if needed.
+3. Fork the repo.
+4. Create a branch.
+5. Submit a pull request.
 
-### 📚 Documentation
-- Improvements to `docs/`, `README.md`, or code comments are always welcome.
-- Submit a PR directly — no issue required for docs-only changes.
+### New Features
+
+1. Open an issue first.
+2. Describe the use case.
+3. Fork the repo.
+4. Create a feature branch.
+5. Submit a PR with tests.
+
+### Documentation
+
+Docs-only improvements to `README.md`, `docs/`, or comments are always welcome.
 
 ---
 
 ## Development Setup
 
+### Current project layout
+
+```text
+bin/
+src/
+src/commands/
+docs/
+shellx-website/
+```
+
+### Running locally
+
 ```bash
-# Clone the repo
-git clone https://github.com/jimgranitex-eng/Shellx.git
-cd Shellx
-
-# Install dependencies (if applicable)
 npm install
+node bin/shellx.js init
+node bin/shellx.js linkx show
+node bin/shellx.js report
+```
 
-# Run tests
-npm test
+---
+
+## Testing
+
+### Manual testing
+
+```bash
+node bin/shellx.js init
+node bin/shellx.js verify
+node bin/shellx.js linkx init
+node bin/shellx.js linkx scan
+node bin/shellx.js linkx timeline
+node bin/shellx.js report --format detailed
 ```
 
 ---
 
 ## Submitting Changes
 
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/my-change`
-3. Make your changes with clear, focused commits.
-4. Push your branch: `git push origin feature/my-change`
-5. Open a Pull Request against `main`.
-
-### Pull Request Checklist
-
-- [ ] Changes are focused and minimal
-- [ ] Existing tests pass
-- [ ] New tests added for new functionality
-- [ ] Documentation updated if needed
-- [ ] Commit messages are clear
+- Keep commits focused
+- Update docs when behavior changes
+- Test locally before opening a PR
+- Reference related issues when relevant
 
 ---
 
-## Reporting Issues
+## Security
 
-Use [GitHub Issues](https://github.com/jimgranitex-eng/Shellx/issues) to report:
-
-- 🐛 Bugs
-- ✨ Feature requests
-- 📚 Documentation gaps
-- 🔐 **Security issues** — please see [SECURITY.md](SECURITY.md) first
+Do not report security issues publicly. See `SECURITY.md`.
 
 ---
 
-## Style Guidelines
+## License
 
-- Keep code readable and well-commented where necessary.
-- Use descriptive names for variables, functions, and files.
-- Follow existing conventions in the file you are editing.
-
----
-
-Thank you for helping make ShellX better! 🚀
+By contributing, you agree that your contributions will be licensed under GPL-3.0.
