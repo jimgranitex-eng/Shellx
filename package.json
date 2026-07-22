@@ -1,0 +1,48 @@
+{
+  "name": "shellx-cli",
+  "version": "3.0.0",
+  "description": "ShellX — Cognitive Developer Engine. Goal-driven automation with persistent memory (LinkX). Analyzes code, preserves intent, performs safe incremental fixes.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "shellx": "./bin/shellx.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "node bin/shellx.js",
+    "test": "node --test tests/**/*.test.js",
+    "lint": "eslint src/",
+    "publish-prod": "npm publish --access public",
+    "publish-test": "npm publish --registry https://test.npmjs.org/ --access public"
+  },
+  "keywords": [
+    "cognitive-engine",
+    "developer-tools",
+    "automation",
+    "linkx",
+    "cli",
+    "diagnostics",
+    "ai",
+    "shellx",
+    "project-analysis",
+    "code-diagnostics"
+  ],
+  "author": "James (jimgranitex-eng)",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimgranitex-eng/Shellx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jimgranitex-eng/Shellx/issues"
+  },
+  "homepage": "https://github.com/jimgranitex-eng/Shellx",
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  }
+}
