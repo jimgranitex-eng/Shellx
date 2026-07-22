@@ -1,7 +1,7 @@
 {
-  "name": "shellx",
+  "name": "shellx-cli",
   "version": "3.0.0",
-  "description": "ShellX — Cognitive Developer Engine. Goal-driven automation with persistent memory.",
+  "description": "ShellX — Cognitive Developer Engine. Goal-driven automation with persistent memory (LinkX). Analyzes code, preserves intent, performs safe incremental fixes.",
   "type": "module",
   "main": "src/index.js",
   "bin": {
@@ -25,7 +25,9 @@
     "cli",
     "diagnostics",
     "ai",
-    "shellx"
+    "shellx",
+    "project-analysis",
+    "code-diagnostics"
   ],
   "author": "James (jimgranitex-eng)",
   "license": "GPL-3.0",
