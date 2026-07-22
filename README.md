@@ -6,18 +6,43 @@
   <img src="shellx-banner.png" width="100%" alt="ShellX Banner">
 </p>
 
-
 # ⚡ ShellX — Cognitive Developer Engine
 
-ShellX is a goal‑driven cognitive developer engine that understands what you are building, why you are building it, and how far along you are. Using a persistent memory system called **LinkX**, ShellX performs safe, incremental, non‑destructive operations that align with your long‑term project goals.
+**ShellX is a goal-driven cognitive developer engine** that understands what you are building, why you are building it, and how far along you are. Using a persistent memory system called **LinkX**, ShellX transforms complex developer workflows into structured intelligence.
 
-ShellX transforms complex developer workflows into structured intelligence, producing:
+![npm version](https://img.shields.io/npm/v/shellx?label=version)
+![License](https://img.shields.io/badge/license-GPL--3.0-green)
+![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)
+![Status](https://img.shields.io/badge/status-production%20ready-blue)
 
-- Summary Report  
-- Detailed Report  
-- Full Report  
-- LinkX memory entry  
-- Stone snapshot  
+## Quick Start
+
+```bash
+# Install globally
+npm install -g shellx
+
+# Initialize in your project
+shellx init
+shellx linkx init
+
+# Run cognitive mode
+shellx --xx "stabilize the rendering pipeline"
+
+# Check the results
+shellx linkx show
+```
+
+---
+
+# 🎯 What ShellX Does
+
+ShellX transforms complex developer workflows into **structured intelligence**, producing:
+
+- **Summary Report** — 1-2-3 clean summary
+- **Detailed Report** — full technical analysis
+- **LinkX Memory Entry** — persistent project history
+- **Stone Snapshot** — recoverable checkpoint
+- **Verification Report** — project integrity check
 
 All from a single command.
 
@@ -26,6 +51,7 @@ All from a single command.
 # 🧠 Core Concepts
 
 ## Triple‑Context Engine
+
 ShellX evaluates every request using three layers of context:
 
 1. **Immediate Intent** — what you asked for  
@@ -37,8 +63,8 @@ ShellX reconciles all three before taking action, ensuring correctness, continui
 ---
 
 ## LinkX — Core Memory System
-LinkX is the **primary memory and goal engine** of ShellX.  
-ShellX boots on top of LinkX and relies on it for context‑aware execution.
+
+LinkX is the **primary memory and goal engine** of ShellX. ShellX boots on top of LinkX and relies on it for context‑aware execution.
 
 LinkX stores:
 
@@ -55,31 +81,28 @@ If LinkX is unavailable, ShellX enters **safe mode** and refuses destructive ope
 ---
 
 ## Builder Mode (Non‑Destructive Execution)
+
 ShellX performs safe, incremental modifications:
 
-- Adds  
-- Extends  
-- Fixes  
-- Improves  
+**Does:**
+- Adds new features
+- Extends existing systems
+- Fixes broken logic
+- Improves performance
 
-ShellX does **not**:
-
-- overwrite  
-- replace  
-- destroy  
-- misplace  
-- duplicate  
-
-Unless explicitly instructed.
+**Never:**
+- Overwrites existing code
+- Deletes files without explicit instruction
+- Destroys project state
+- Misplaces or duplicates
 
 Builder Mode ensures ShellX behaves like a **craftsman**, not a rewriter.
 
 ---
 
-## Non‑Destructive Superman
-Superman is the orchestrator that coordinates all workers and performs deep, multi‑agent diagnostics.
+## Superman Mode — Deep Multi‑Agent Diagnostics
 
-Superman:
+Superman is the orchestrator that coordinates all workers and performs comprehensive analysis:
 
 - Loads LinkX  
 - Confirms the project goal  
@@ -87,158 +110,290 @@ Superman:
 - Reconciles context  
 - Runs workers safely  
 - Updates LinkX  
-- Creates a Stone  
+- Creates a Stone snapshot  
 
-Superman is powerful, precise, and fully goal‑aware.
+Superman is powerful, precise, and fully goal‑aware. It operates under the Triple‑Context Engine and refuses to proceed if contexts don't align.
 
 ---
 
-# 🚀 Getting Started with ShellX V5
+# 🚀 Installation & Usage
 
-ShellX V5 is designed to be simple to use while providing deep cognitive intelligence.
+## Installation
 
-## Quick Start
-
-### 1. Install ShellX
+### Global (Recommended)
 ```bash
 npm install -g shellx
+shellx --version
 ```
 
-### 2. Initialize LinkX (required)
+### Local Development
+```bash
+git clone https://github.com/jimgranitex-eng/Shellx.git
+cd Shellx
+npm install
+node bin/shellx.js --version
+```
+
+---
+
+## Commands
+
+### Initialize ShellX
+```bash
+shellx init
+```
+Creates `.linkx/`, `.reports/`, and `.stones/` directories in your project.
+
+### Initialize LinkX
 ```bash
 shellx linkx init
 ```
+Initializes the persistent memory system.
 
-### 3. Run a basic command
+### LinkX Commands
+
 ```bash
-shellx "analyze the project structure"
+# Scan your project
+shellx linkx scan
+
+# View LinkX state
+shellx linkx show
+
+# View project timeline
+shellx linkx timeline
 ```
 
-### 4. Cognitive Mode (recommended)
+### Verification
 ```bash
-shellx --xx "stabilize the rendering pipeline"
+shellx verify
+```
+Verifies ShellX installation and configuration.
+
+### Generate Reports
+```bash
+# Summary report (default)
+shellx report
+
+# Detailed report
+shellx report --format detailed
+
+# Full comprehensive report
+shellx report --format full
 ```
 
-### 5. Superman Mode (advanced)
+### Cognitive Mode (Recommended)
 ```bash
-shellx-superman "full diagnostic"
+shellx --xx "your intent here"
+```
+Natural language intent extraction. Describe what you need, and ShellX runs the full pipeline, delivering a clean 1-2-3 summary.
+
+Example:
+```bash
+shellx --xx "Fix the rendering pipeline and optimize the shader system"
 ```
 
----
-
-# ⚠️ Superman Mode — Power Notice (Safe, but High‑Capability)
-
-Superman is the most capable operator in ShellX. It performs deep diagnostics, multi‑agent orchestration, and large‑scale project analysis. Superman **does work**, and it works extremely well — but like a jet or a car engine, it must be used with intention.
-
-Superman is **not dangerous** or harmful. It simply has the ability to modify many files quickly **if ShellX instructs it to do so**.
-
-Superman will never:
-
-- act on its own  
-- overwrite files randomly  
-- delete code without instruction  
-- ignore the project goal  
-- bypass LinkX  
-- skip safety checks  
-
-Superman only performs modifications when ShellX gives **precise, validated, goal‑aligned commands**.
-
-## Why This Notice Exists
-Superman can traverse the entire project, apply multi‑agent fixes, refactor code, update architecture, generate Stones, and update LinkX. This is **power**, not danger. Like a jet engine or a car engine — it is perfectly safe when used correctly.
-
-## Superman V5 Safety Model
-Superman uses the **Triple‑Context Engine**:
-
-1. Immediate Intent  
-2. Long‑Term Goal  
-3. Actual Project State  
-
-Superman will not proceed unless all three contexts align. If they do not align, Superman pauses and asks for clarification.
-
-## Safe Mode Behavior
-If LinkX is missing or corrupted:
-
-- No destructive actions are taken  
-- No architecture rewrites occur  
-- No autofixes are applied  
-
-Superman produces a **diagnostic‑only report** and a **LinkX integrity notice**.
-
----
-
-# 🧩 What ShellX Is Good At
-
-ShellX excels at:
-
-### ✔ Code Diagnostics
-- Broken logic  
-- Missing imports  
-- Mismatched types  
-- Dependency issues  
-- Architectural inconsistencies  
-- Structural drift  
-
-### ✔ Goal‑Aware Development
-- Tracks long‑term intent  
-- Preserves project direction  
-- Maintains continuity  
-
-### ✔ Safe Incremental Updates
-- Adds features  
-- Extends systems  
-- Fixes components  
-- Refactors safely  
-
-### ✔ Deep Multi‑Agent Analysis
-- Full audits  
-- Architecture mapping  
-- Hidden issue detection  
-- Stone creation  
-- LinkX updates  
-
-### ✔ Human‑Readable Intelligence
-- Summary Report  
-- Detailed Report  
-- Full Report  
-- Stones  
-- LinkX entries  
-
-ShellX is not a code generator.  
-It is a **cognitive assistant** that helps you build and maintain complex systems safely and intelligently.
+Output:
+```
+1. What you wanted: Fix the rendering pipeline and optimize the shader system
+2. What ShellX did: Deep audit → Scan → Analyze → Memory update
+3. What changed: Project analyzed, LinkX updated with findings
+```
 
 ---
 
 # 📁 Project Structure
 
 ```
-src/
-  shellx-core/
-  workers/
-  linkx-core/
-  stones/
-  reporting/
-docs/
-  ShellX-V5-Architecture.md
-  LinkX-V5-Architecture.md
-  Builder-Mode.md
-  Triple-Context-Engine.md
-  Non-Destructive-Superman.md
-  Goal-Preservation.md
-  KickerOS-Integration.md
+.
+├── bin/
+│   └── shellx.js              CLI entry point
+├── src/
+│   ├── index.js               CLI router
+│   └── commands/
+│       ├── init.js            Project initialization
+│       ├── linkx.js           LinkX memory commands
+│       ├── verify.js          Verification pipeline
+│       └── report.js          Report generation
+├── docs/                      Documentation suite
+├── shellx-website/            GitHub Pages website
+├── package.json               npm package definition
+└── README.md                  This file
+```
+
+---
+
+# ⚠️ Safety Notice: Superman Mode
+
+Superman is the most capable operator in ShellX and performs deep diagnostics, multi-agent orchestration, and large-scale project analysis. Superman **does work**, and it works extremely well — but with safeguards.
+
+**Superman will never:**
+- Act on its own  
+- Overwrite files randomly  
+- Delete code without explicit instruction  
+- Ignore the project goal  
+- Bypass LinkX  
+- Skip safety checks  
+
+Superman only performs modifications when ShellX gives **precise, validated, goal-aligned commands**. It uses the Triple‑Context Engine and requires all three contexts to align before proceeding.
+
+### Safe Mode Behavior
+
+If LinkX is missing or corrupted:
+- No destructive actions are taken  
+- No architecture rewrites occur  
+- No autofixes are applied  
+- Superman produces a **diagnostic-only report** and LinkX integrity notice
+
+---
+
+# ✅ What ShellX Excels At
+
+### Code Diagnostics
+- Broken logic detection
+- Missing imports
+- Type mismatches
+- Dependency issues
+- Architectural inconsistencies
+- Structural drift
+
+### Goal‑Aware Development
+- Tracks long-term intent
+- Preserves project direction
+- Maintains continuity and context
+
+### Safe Incremental Updates
+- Adds features safely
+- Extends systems intelligently
+- Fixes components without side effects
+- Refactors with verification
+
+### Deep Multi‑Agent Analysis
+- Full project audits
+- Architecture mapping
+- Hidden issue detection
+- Stone creation and management
+- LinkX memory updates
+
+### Human‑Readable Intelligence
+- Summary reports (1-2-3 format)
+- Detailed technical reports
+- Full comprehensive analysis
+- Searchable history via LinkX
+- Persistent decision timeline
+
+---
+
+# 🧩 What ShellX Is NOT
+
+- **Not a code generator** — ShellX analyzes and improves existing code
+- **Not a code replacement engine** — It preserves your intent and direction
+- **Not a black box** — All actions are logged, traceable, and reversible via Stones
+- **Not dangerous** — It respects LinkX goals and requires context alignment
+
+ShellX is a **cognitive assistant** that helps you build and maintain complex systems safely and intelligently.
+
+---
+
+# 📦 Output Artifacts
+
+Every ShellX operation generates:
+
+| Artifact | Location | Purpose |
+|----------|----------|----------|
+| Reports | `.reports/` | Human-readable summaries and analysis |
+| Stones | `.stones/` | Immutable snapshots for recovery |
+| LinkX Memory | `.linkx/core.json` | Persistent project timeline |
+
+---
+
+# 🔗 LinkX Integration
+
+LinkX is ShellX's **persistent memory layer**. It tracks:
+
+- **Project Goals** — what you're building
+- **Constraints** — what you can't change
+- **Preferences** — how you like to work
+- **Intent History** — every decision made
+- **Stones** — recovery points at key milestones
+
+Access LinkX data:
+
+```bash
+shellx linkx show              # View all memory
+shellx linkx timeline          # View history
+cat .linkx/core.json           # Raw data
 ```
 
 ---
 
 # 📄 License
 
-ShellX (open source) is licensed under the **GNU GPL v3**.  
-ShellX Pro is licensed under a **commercial license**.
+ShellX is dual-licensed:
+
+- **Open Source**: Licensed under [GNU GPL v3](LICENSE)
+- **Commercial**: Licensed under [Commercial License](LICENSE-PRO.md)
+
+For commercial licensing, see [ShellX Pro](docs/Pro-Pricing.md).
+
+---
+
+# 🤝 Contributing
+
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### Quick Start for Contributors
+
+```bash
+git clone https://github.com/jimgranitex-eng/Shellx.git
+cd Shellx
+npm install
+
+# Test the CLI
+node bin/shellx.js --version
+node bin/shellx.js init
+
+# Make changes, then test
+npm test
+
+# Submit a PR
+```
+
+---
+
+# 🎯 Roadmap
+
+## V3.0 (Current)
+✅ Cognitive mode with natural language processing
+✅ LinkX memory system
+✅ Stone snapshots
+✅ Multi-command CLI
+✅ Report generation
+
+## V4.0 (Coming)
+🚀 Plugin system
+🚀 Worker registry
+🚀 Cloud LinkX timeline
+🚀 Stone diff viewer
+🚀 VS Code extension
+🚀 ShellX Pro modules
+
+---
+
+# 📚 Documentation
+
+- [Quick Start Guide](docs/Quickstart.md)
+- [Command Reference](docs/Commands.md)
+- [LinkX Architecture](docs/LinkX-Architecture.md)
+- [Pro Features](docs/Pro-Features.md)
+- [Pro Pricing](docs/Pro-Pricing.md)
+- [Contributing Guide](CONTRIBUTING.md)
 
 ---
 
 # 🎯 In One Sentence
 
-**ShellX is a cognitive developer engine that preserves your long‑term project goals, analyzes your codebase, and performs safe, incremental operations using a persistent memory system called LinkX.**
-```
+**ShellX is a cognitive developer engine that preserves your long‑term project goals, analyzes your codebase intelligently, and performs safe, incremental operations using a persistent memory system called LinkX.**
 
 ---
+
+**Created by [James](https://github.com/jimgranitex-eng) • Part of the KickerOS ecosystem • [GitHub](https://github.com/jimgranitex-eng/Shellx)**
