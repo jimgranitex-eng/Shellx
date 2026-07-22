@@ -2,19 +2,23 @@
 
 ShellX is a goal-driven cognitive developer engine that helps you understand what you're building, why you're building it, and how far along you are. It uses a persistent memory system called **LinkX** to produce safe, incremental, traceable operations.
 
-## Install
+## npm package
 
 ```bash
 npm install -g shellx-dev-cli
 ```
 
-## Quick Start
+## CLI commands
 
 ```bash
 shellx init
 shellx linkx init
-shellx --xx "stabilize the rendering pipeline"
+shellx linkx scan
 shellx linkx show
+shellx linkx timeline
+shellx verify
+shellx report
+shellx --xx "analyze the project structure"
 ```
 
 ## What ShellX does
@@ -26,8 +30,6 @@ ShellX turns complex developer workflows into structured output:
 - Full Report
 - LinkX memory entry
 - Stone snapshot
-
-All from a single command.
 
 ---
 
@@ -46,44 +48,11 @@ ShellX reconciles all three before taking action, ensuring correctness, continui
 LinkX is the primary memory and goal engine of ShellX.
 ShellX boots on top of LinkX and relies on it for context-aware execution.
 
-LinkX stores:
-
-- Project goal
-- Project constraints
-- Project preferences
-- Project state
-- Intent history
-- Context model
-- Stones (restore points)
-
 If LinkX is unavailable, ShellX enters safe mode and refuses destructive operations.
-
-### Builder Mode
-ShellX performs safe, incremental modifications:
-
-- Adds
-- Extends
-- Fixes
-- Improves
-
-ShellX does not overwrite, replace, destroy, misplace, or duplicate unless explicitly instructed.
-
-### Superman Mode
-Superman orchestrates workers and performs deep diagnostics:
-
-- Loads LinkX
-- Confirms the project goal
-- Scans the codebase
-- Reconciles context
-- Runs workers safely
-- Updates LinkX
-- Creates a Stone
-
-Superman is powerful, precise, and goal-aware.
 
 ---
 
-## Getting Started
+## Installation examples
 
 ### Global install
 
@@ -91,100 +60,13 @@ Superman is powerful, precise, and goal-aware.
 npm install -g shellx-dev-cli
 ```
 
-### Local development
+### Verify install
 
 ```bash
-git clone https://github.com/jimgranitex-eng/Shellx.git
-cd Shellx
-npm install
-node bin/shellx.js --version
-```
-
-## Commands
-
-### Initialize ShellX
-
-```bash
+shellx --version
 shellx init
-```
-
-Creates `.linkx/`, `.reports/`, and `.stones/`.
-
-### Initialize LinkX
-
-```bash
-shellx linkx init
-```
-
-Initializes the persistent memory system.
-
-### LinkX commands
-
-```bash
 shellx linkx scan
-shellx linkx show
-shellx linkx timeline
 ```
-
-### Verify installation
-
-```bash
-shellx verify
-```
-
-### Generate reports
-
-```bash
-shellx report
-shellx report --format detailed
-shellx report --format full
-```
-
-### Cognitive mode
-
-```bash
-shellx --xx "your intent here"
-```
-
-Example:
-
-```bash
-shellx --xx "Fix the rendering pipeline and optimize the shader system"
-```
-
----
-
-## Project Structure
-
-```
-.
-├── bin/
-│   └── shellx.js
-├── src/
-│   ├── index.js
-│   └── commands/
-│       ├── init.js
-│       ├── linkx.js
-│       ├── verify.js
-│       └── report.js
-├── docs/
-├── shellx-website/
-├── package.json
-└── README.md
-```
-
----
-
-## License
-
-- Open source: [GNU GPL v3](LICENSE)
-- Commercial: [LICENSE-PRO.md](LICENSE-PRO.md)
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
