@@ -22,7 +22,7 @@ export async function runShellX() {
       process.exitCode = 1;
       return;
     }
-    await cognitiveMode(intent);
+    cognitiveMode(intent);
     return;
   }
 
@@ -85,7 +85,7 @@ export async function runShellX() {
   }
 }
 
-async function cognitiveMode(intent) {
+function cognitiveMode(intent) {
   console.log('\n🧠 ShellX Cognitive Mode');
   console.log(`Intent: "${intent}"\n`);
   console.log('🔍 Analyzing intent...');

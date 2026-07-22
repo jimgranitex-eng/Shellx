@@ -6,7 +6,8 @@ const linkxPath = join(process.cwd(), '.linkx', 'core.json');
 function ensureLinkX() {
   if (!existsSync(linkxPath)) {
     console.error('\n❌ LinkX not initialized. Run: shellx init');
-    process.exit(1);
+    process.exitCode = 1;
+    return null;
   }
   return JSON.parse(readFileSync(linkxPath, 'utf8'));
 }
@@ -19,6 +20,7 @@ export const linkxCommand = {
   init() {
     console.log('\n🧠 Initializing LinkX...');
     const linkx = ensureLinkX();
+    if (!linkx) return;
     linkx.projectState.status = 'active';
     linkx.projectState.lastScanned = new Date().toISOString();
     saveLinkX(linkx);
@@ -29,6 +31,7 @@ export const linkxCommand = {
   scan() {
     console.log('\n📊 Scanning project with LinkX...');
     const linkx = ensureLinkX();
+    if (!linkx) return;
     linkx.projectState.lastScanned = new Date().toISOString();
     linkx.projectState.filesTracked = Math.floor(Math.random() * 100) + 10; // Mock
     saveLinkX(linkx);
@@ -40,6 +43,7 @@ export const linkxCommand = {
   show() {
     console.log('\n📖 LinkX Memory State:');
     const linkx = ensureLinkX();
+    if (!linkx) return;
     console.log('\nCore Information:');
     console.log(`  Version: ${linkx.version}`);
     console.log(`  Created: ${linkx.created}`);
@@ -61,6 +65,7 @@ export const linkxCommand = {
   timeline() {
     console.log('\n⏳ LinkX Timeline:');
     const linkx = ensureLinkX();
+    if (!linkx) return;
     console.log(`\nIntent History (${linkx.intentHistory.length} entries):`);
     if (linkx.intentHistory.length === 0) {
       console.log('  (no history yet)');
