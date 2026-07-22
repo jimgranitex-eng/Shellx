@@ -1,5 +1,11 @@
 import { existsSync, readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const packageJson = JSON.parse(readFileSync(join(__dirname, '../../package.json'), 'utf8'));
+const cliVersion = packageJson.version;
 
 function generateReport(format) {
   const timestamp = new Date().toISOString();
@@ -23,7 +29,7 @@ Recommendations:
 Generated: ${timestamp}
 
 === System State ===
-Version: 3.0.0
+Version: ${cliVersion}
 Environment: ${process.env.NODE_ENV || 'development'}
 
 === LinkX State ===
@@ -38,13 +44,13 @@ Potential Issues: 0
 === Recommendations ===
 1. Define your project goal in .linkx/core.json
 2. Run cognitive mode: shellx --xx "your intent"
-3. Create a stone checkpoint: shellx stone create "initial state"
+3. Review LinkX timeline: shellx linkx timeline
 `;
   }
 
   return `ShellX Full Diagnostic Report
 Generated: ${timestamp}
-Version: 3.0.0
+Version: ${cliVersion}
 
 === COMPREHENSIVE ANALYSIS ===
 

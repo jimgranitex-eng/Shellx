@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
 const linkxPath = join(process.cwd(), '.linkx', 'core.json');
@@ -14,6 +14,26 @@ function ensureLinkX() {
 
 function saveLinkX(data) {
   writeFileSync(linkxPath, JSON.stringify(data, null, 2));
+}
+
+function countTrackedFiles(dir) {
+  const ignored = new Set(['.git', 'node_modules', '.linkx', '.reports', '.stones']);
+  let total = 0;
+  const entries = readdirSync(dir);
+
+  for (const entry of entries) {
+    if (ignored.has(entry)) continue;
+    const fullPath = join(dir, entry);
+    const stats = statSync(fullPath);
+
+    if (stats.isDirectory()) {
+      total += countTrackedFiles(fullPath);
+    } else if (stats.isFile()) {
+      total += 1;
+    }
+  }
+
+  return total;
 }
 
 export const linkxCommand = {
@@ -33,7 +53,7 @@ export const linkxCommand = {
     const linkx = ensureLinkX();
     if (!linkx) return;
     linkx.projectState.lastScanned = new Date().toISOString();
-    linkx.projectState.filesTracked = Math.floor(Math.random() * 100) + 10; // Mock
+    linkx.projectState.filesTracked = countTrackedFiles(process.cwd());
     saveLinkX(linkx);
     console.log(`✅ Scan complete`);
     console.log(`📁 Files tracked: ${linkx.projectState.filesTracked}`);
