@@ -64,11 +64,18 @@ export async function runShellX() {
     .option('-f, --format <type>', 'Report format (summary|detailed|full)', 'summary')
     .action(reportCommand);
 
-  // Cognitive mode
-  program
-    .command('--xx <intent>')
-    .description('Cognitive mode: natural language intent processing')
-    .action((intent) => cognitiveMode(intent));
+  program.addHelpText('after', '\nCognitive mode:\n  shellx --xx "your intent here"\n');
+
+  // Cognitive mode shortcut
+  if (process.argv[2] === '--xx') {
+    const intent = process.argv.slice(3).join(' ').trim();
+    if (!intent) {
+      console.error('\n❌ Missing intent. Usage: shellx --xx "your intent here"\n');
+      process.exit(1);
+    }
+    await cognitiveMode(intent);
+    return;
+  }
 
   // Parse arguments
   program.parse(process.argv);

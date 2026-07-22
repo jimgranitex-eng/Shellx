@@ -2,6 +2,13 @@
 
 Private documentation and landing page for ShellX.
 
+CLI package name: `shellx-dev-cli`  
+Global install:
+
+```bash
+npm install -g shellx-dev-cli
+```
+
 ## Deployment
 
 ### GitHub Pages

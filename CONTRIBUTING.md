@@ -14,6 +14,12 @@ cd Shellx
 npm install
 ```
 
+Published CLI package:
+
+```bash
+npm install -g shellx-dev-cli
+```
+
 ### Test the CLI
 
 ```bash
