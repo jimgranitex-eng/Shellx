@@ -1,2 +1,11 @@
 .git
 node_modules
+__pycache__
+*.pyc
+.env
+bundle/.blackbox_runs/
+bundle/.quarantine/
+bundle/.reports/
+bundle/__pycache__/
+bundle/activity_timeline.json
+bundle/LinkX_AI_Heart.md

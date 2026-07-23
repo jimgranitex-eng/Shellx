@@ -15,3 +15,5 @@ bundle/.reports/
 .shellx/goal.json
 .shellx/license.json
 .shellx/trial.json
+bundle/activity_timeline.json
+bundle/LinkX_AI_Heart.md
