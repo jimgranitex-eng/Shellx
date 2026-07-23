@@ -24,7 +24,7 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jimgranitex-eng/Shellx.git"
+    "url": "git+https://github.com/jimgranitex-eng/Shellx.git"
   },
   "engines": {
     "node": ">=18"
