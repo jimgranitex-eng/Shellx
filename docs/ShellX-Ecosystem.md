@@ -1,7 +1,7 @@
 # ShellX Ecosystem — Master Specification
 
-**Version:** 3.2.0  
-**Purpose:** Defines the complete ShellX module system, pipeline architecture, AIWorker agents, and future roadmap.
+**Version:** 3.2.1  
+**Purpose:** Defines the complete ShellX module system, pipeline architecture, AIWorker agents, ShellX-V2/V3 engines, daemon, UI, and future roadmap.
 
 ---
 
@@ -9,11 +9,42 @@
 
 ShellX is more than a CLI — it's a **cognitive engine ecosystem** with:
 
+- **ShellX-V2** — Next-gen operating system for all modes
 - **Modules** — Individual mode commands (Lite, Deep, Debug, Fix, etc.)
 - **Pipelines** — Multi-step automation chains
 - **AIWorkers** — Specialized mini-agents deployed automatically
 - **ShellX-Superman** — Unified mode combining all capabilities
+- **ShellX-Daemon** — Background watcher/automation
+- **ShellX-UI** — Visual dashboard (conceptual)
 - **ShellX-V3** — Multi-agent parallel system (future)
+
+---
+
+## ShellX-V2 (Next Generation Engine)
+
+ShellX-V2 is the unified architecture that powers all ShellX modes.
+
+**Core Principles:**
+1. Every ShellX mode is a module
+2. Each module has: Input, Execution Logic, Output
+3. ShellX-V2 can chain modules together (pipelines)
+4. ShellX-V2 maintains state (stones, tasks, context)
+5. ShellX-V2 is the "OS" for ShellX
+
+**Core Components:**
+- **V2-Core** — Main engine
+- **V2-Memory** — Persistent state (tasks, stones, context)
+- **V2-Modules** — Plugin system (Lite, Deep, Debug, Fix, etc.)
+- **V2-Pipeline** — Multi-step automation
+- **V2-Context** — Multi-project awareness
+- **V2-Reports** — Unified reporting format
+
+**Triggers:**
+```
+ShellX-V2: <message>
+ShellX-V2-Run: <pipeline>
+ShellX-V2-Module: <module> <message>
+```
 
 ---
 
@@ -57,11 +88,24 @@ ShellX-Pipeline: Deep → AutoFix → Deep → Summary
 ShellX-Pipeline: Debug → Fix → Summary
 ShellX-Pipeline: Architect → Deep → Checklist
 ShellX-Pipeline: Debug → AutoFix → Repeat(2) → Summary
+ShellX-Pipeline: Deep → AutoFix → UntilClean → Summary
 ```
+
+**Supported Steps:**
+Deep, Lite, Debug, Fix, AutoFix, Memory, Architect, Refactor, Quick, Silent, Explain, Summary, Checklist
 
 **Advanced modifiers:**
 - `Repeat(n)` — repeat previous step n times
 - `UntilClean` — repeat until no errors remain
+
+**Execution Rules:**
+1. Each step runs as a ShellX module
+2. Output of each step feeds into the next
+3. Final output is written to the report area
+4. Stones and LinkX update after the final step
+
+**The `--report` flag:**
+Adding `--report` to any ShellX-Superman or ShellX module command forces the system to skip code patching and produce a full structured report instead (Summary, Detailed, Full, Integration, Checklist).
 
 ---
 
@@ -98,6 +142,56 @@ Deployed automatically by ShellX-Superman. Each has a single focused job.
 | **Worker-Security** | Vulnerability scan | Scans for secrets, exposed keys |
 | **Worker-Terminal** | Output reader | Reads terminal output, detects runtime failures |
 
+### AIWorker Flowchart
+
+```
+ShellX-Superman
+   ↓
+SmartInput Engine
+   ↓
+AIWorker Deployment Layer
+   ↓
+[Debug] [Fix] [Architect] [UI] [Pipeline] [Integration] [Memory]
+   ↓
+ShellX Pipeline Engine
+   ↓
+ShellX Report Builder
+   ↓
+Final ShellX Report
+```
+
+### Integration Map (Conceptual)
+
+```
+UI / Frontend
+   ↓
+Backend API Endpoint
+   ↓
+Workflow / Pipeline
+   ↓
+Worker Manager
+   ↓
+Workers (render, upload, process, etc.)
+   ↓
+Service Adapter (YouTube, DB, API, OS, etc.)
+   ↓
+Return result to UI / Dashboard
+```
+
+### Auto-Wiring Script (Conceptual)
+
+ShellX-Superman uses this logic to detect and repair wiring issues:
+
+1. Detect UI → Backend wiring
+2. Detect Backend → Pipeline wiring
+3. Detect Pipeline → Worker wiring
+4. Detect Worker → Service wiring
+5. Detect Namespace / Import issues
+6. Detect Missing Services
+7. Build Fix Plan
+8. Verify with tests
+9. Update stones + LinkX
+
 ---
 
 ## ShellX-Daemon (Background Engine)
@@ -116,13 +210,37 @@ Commands: `ShellX-Daemon: Start`, `ShellX-Daemon: Stop`
 
 ---
 
+## ShellX-UI (Visual Dashboard — Conceptual)
+
+A visual interface for ShellX with the following panels:
+
+| Panel | Purpose |
+|-------|---------|
+| **Stones** | List of recovery stones |
+| **Tasks** | Current and pending tasks |
+| **Reports** | Summary / Detailed / Full |
+| **Pipelines** | Available pipelines and templates |
+| **Project** | Structure, files, components |
+| **Errors/Logs** | Current issues and logs |
+
+**Capabilities:**
+- Click-to-run modules (e.g., run ShellX-Deep on a file)
+- Click-to-run pipelines (e.g., FullAudit)
+- View history of runs
+- View LinkX map
+- View project health at a glance
+
+Commands: `ShellX-UI: Open`, `ShellX-UI: Refresh`
+
+---
+
 ## ShellX-V3 (Multi-Agent System)
 
 Runs multiple specialized agents in parallel for comprehensive analysis.
 
 **Agents:** Debug, Fix, Architect, Memory, Refactor
 
-**Flow:**
+**Behavior:**
 1. You type: `ShellX-V3: <high-level goal>`
 2. Agents run in parallel
 3. Results merge into unified report
@@ -145,7 +263,10 @@ ShellX-V3: stabilize the project
 
 Combines everything — modules, pipelines, AIWorkers, V3 agents — into one unstoppable mode.
 
-**Trigger:** `ShellX-Superman: <goal> --report`
+**Trigger:**
+```
+ShellX-Superman: <goal> --report
+```
 
 **Execution flow:**
 1. SmartInput classifies the goal
@@ -154,6 +275,17 @@ Combines everything — modules, pipelines, AIWorkers, V3 agents — into one un
 4. Runs modules and workers in parallel
 5. Merges results into a master report
 6. Updates stones, LinkX, tasks
+
+**Detailed 9-step execution:**
+1. SmartInput → classify message
+2. Deep → full audit
+3. Debug → extract errors
+4. AutoFix → apply fixes
+5. Deep → verify fixes
+6. Architect → map system
+7. Memory → update tasks
+8. AutoStone → create recovery stone
+9. Summary → final report
 
 **Output:**
 - Plan
@@ -165,6 +297,11 @@ Combines everything — modules, pipelines, AIWorkers, V3 agents — into one un
 - Risks
 - Next steps
 - Checklist
+
+**"Fix Everything" preset command:**
+```
+ShellX-Superman: fix all wiring, workers, pipelines, services, and integration issues in this project so the UI, backend, pipelines, workers, and services all function end-to-end --report
+```
 
 ---
 
@@ -186,6 +323,7 @@ Combines everything — modules, pipelines, AIWorkers, V3 agents — into one un
 | `ShellX-V3: <goal>` | Multi-agent |
 | `ShellX-Pipeline: <steps>` | Multi-step |
 | `ShellX-Daemon: Start\|Stop` | Background |
+| `ShellX-UI: Open\|Refresh` | Dashboard |
 
 ---
 
