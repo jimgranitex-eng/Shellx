@@ -107,7 +107,7 @@ shellx activate SHELLX-PRO-XXXX-XXXX-XXXX
 
 ## Next Steps
 
-- [Commands Reference](../README.md#commands)
+- [Full 40-Command Reference](Commands.md)
 - [Pro Features](Pro-Features.md)
 - [Pro FAQ](Pro-FAQ.md)
 - [Contributing](../CONTRIBUTING.md)

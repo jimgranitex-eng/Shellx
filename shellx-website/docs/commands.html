@@ -24,88 +24,24 @@
         <aside class="sidebar">
             <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Command Reference</h3>
             <ul class="sidebar-nav">
-                <li><a href="#cognitive">Cognitive (V3)</a></li>
-                <li><a href="#superman">Superman</a></li>
-                <li><a href="#core">Core (V1)</a></li>
-                <li><a href="#workers">Workers (V2)</a></li>
-                <li><a href="#multi">Multi-Project</a></li>
-                <li><a href="#stones">Stones</a></li>
-                <li><a href="#linkx">LinkX</a></li>
-                <li><a href="#experimental">Experimental</a></li>
+                <li><a href="#core">1️⃣ Core (7)</a></li>
+                <li><a href="#linkx">2️⃣ LinkX (10)</a></li>
+                <li><a href="#stones">3️⃣ Stones (5)</a></li>
+                <li><a href="#licensing">4️⃣ Licensing (6)</a></li>
+                <li><a href="#ide">5️⃣ IDE (7)</a></li>
+                <li><a href="#cognitive">6️⃣ Cognitive (4)</a></li>
+                <li><a href="#tools">7️⃣ Tools (5)</a></li>
+                <li><a href="#multi">8️⃣ Multi (3)</a></li>
             </ul>
         </aside>
 
         <main class="main-content">
             <h1>Commands Cheat Sheet</h1>
             <p class="lead" style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">
-                Complete reference for all ShellX commands across V1, V2, V3, and Superman.
+                Complete reference for all 40 ShellX commands across 8 categories.
             </p>
 
-            <h2 id="cognitive">🧠 Cognitive Mode (V3)</h2>
-            <p>The flagship natural language interface. Describe what you want, get results.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Description</th>
-                        <th>Output</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>shellx --xx "&lt;message&gt;"</code></td>
-                        <td>Cognitive mode with full pipeline</td>
-                        <td>1-2-3 summary + report</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="terminal" style="margin: 1.5rem 0;">
-                <div class="terminal-body">
-                    <div class="terminal-line">
-                        <span class="prompt">$</span>
-                        <span class="command">shellx --xx "Optimize database queries in the auth module"</span>
-                    </div>
-                </div>
-            </div>
-
-            <h2 id="superman">🦸 Superman Mode</h2>
-            <p>All-systems diagnostic engine. Runs the complete pipeline.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Description</th>
-                        <th>Pipeline</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>shellx-superman "&lt;message&gt;"</code></td>
-                        <td>Full diagnostic suite</td>
-                        <td>9 workers</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <p>Superman runs:</p>
-            <ol>
-                <li>Smart input processing</li>
-                <li>Deep audit</li>
-                <li>Debug analysis</li>
-                <li>Architect review</li>
-                <li>Memory update</li>
-                <li>Safe autofix</li>
-                <li>Verification</li>
-                <li>Stone creation</li>
-                <li>LinkX update</li>
-            </ol>
-
-            <h2 id="core">🧱 Core Commands (V1)</h2>
-            <p>Original ShellX command set.</p>
-
+            <h2 id="core">1️⃣ Core Commands (7)</h2>
             <table>
                 <thead>
                     <tr>
@@ -114,77 +50,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><code>shellx "&lt;message&gt;"</code></td>
-                        <td>Legacy direct mode</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx report</code></td>
-                        <td>Generate comprehensive report</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx preflight</code></td>
-                        <td>System readiness check</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx collect</code></td>
-                        <td>Collect system diagnostics</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx look</code></td>
-                        <td>Inspect current state</td>
-                    </tr>
+                    <tr><td><code>shellx "&lt;intent&gt;"</code></td><td>Natural-language intent (auto-detected)</td></tr>
+                    <tr><td><code>shellx --help</code></td><td>Show full help</td></tr>
+                    <tr><td><code>shellx --version</code></td><td>Show version</td></tr>
+                    <tr><td><code>shellx init</code></td><td>Initialize project</td></tr>
+                    <tr><td><code>shellx verify</code></td><td>System/environment check</td></tr>
+                    <tr><td><code>shellx doctor</code></td><td>Run diagnostic doctor</td></tr>
+                    <tr><td><code>shellx report</code></td><td>Generate full report</td></tr>
                 </tbody>
             </table>
 
-            <h2 id="workers">🧩 Worker Commands (V2)</h2>
-            <p>Individual worker access for specific tasks.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Worker</th>
-                        <th>Purpose</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>shellx deep-audit</code></td>
-                        <td>Auditor</td>
-                        <td>System analysis & bottleneck detection</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx debug</code></td>
-                        <td>Debugger</td>
-                        <td>Issue identification & tracing</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx architect</code></td>
-                        <td>Architect</td>
-                        <td>Structural recommendations</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx memory</code></td>
-                        <td>Memory</td>
-                        <td>State management & LinkX sync</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx autofix --safe</code></td>
-                        <td>Autofix</td>
-                        <td>Safe automatic repairs</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx verify</code></td>
-                        <td>Verifier</td>
-                        <td>Change validation</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2 id="multi">🧬 Multi-Project Mode</h2>
-            <p>Manage multiple repositories simultaneously.</p>
-
+            <h2 id="linkx">2️⃣ LinkX Memory & Analysis (10)</h2>
             <table>
                 <thead>
                     <tr>
@@ -193,16 +69,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><code>shellx multi-project "&lt;instructions&gt;"</code></td>
-                        <td>Run across multiple project contexts</td>
-                    </tr>
+                    <tr><td><code>shellx linkx init</code></td><td>Create goal file</td></tr>
+                    <tr><td><code>shellx linkx scan</code></td><td>Scan project</td></tr>
+                    <tr><td><code>shellx linkx show</code></td><td>Show memory</td></tr>
+                    <tr><td><code>shellx linkx timeline</code></td><td>Timeline view</td></tr>
+                    <tr><td><code>shellx linkx search</code></td><td>Search memory</td></tr>
+                    <tr><td><code>shellx linkx diff</code></td><td>Compare memory states</td></tr>
+                    <tr><td><code>shellx linkx export</code></td><td>Export memory</td></tr>
+                    <tr><td><code>shellx linkx import</code></td><td>Import memory</td></tr>
+                    <tr><td><code>shellx linkx purge</code></td><td>Clear memory</td></tr>
+                    <tr><td><code>shellx linkx rebuild</code></td><td>Rebuild memory</td></tr>
                 </tbody>
             </table>
 
-            <h2 id="stones">🪨 Stone Commands</h2>
-            <p>Recovery snapshot management.</p>
-
+            <h2 id="stones">3️⃣ Stone System (5)</h2>
             <table>
                 <thead>
                     <tr>
@@ -211,28 +91,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><code>shellx stone list</code></td>
-                        <td>List all stones</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx stone show &lt;id&gt;</code></td>
-                        <td>View stone details</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx stone diff &lt;id&gt;</code></td>
-                        <td>View changes in stone</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx stone restore &lt;id&gt;</code></td>
-                        <td>Rollback to stone state</td>
-                    </tr>
+                    <tr><td><code>shellx stone list</code></td><td>List stones</td></tr>
+                    <tr><td><code>shellx stone show &lt;id&gt;</code></td><td>Show stone details</td></tr>
+                    <tr><td><code>shellx stone diff &lt;id&gt;</code></td><td>Compare stones</td></tr>
+                    <tr><td><code>shellx stone restore &lt;id&gt;</code></td><td>Restore snapshot</td></tr>
+                    <tr><td><code>shellx stone create</code></td><td>Create snapshot</td></tr>
                 </tbody>
             </table>
 
-            <h2 id="linkx">🧠 LinkX Commands</h2>
-            <p>Memory timeline and search.</p>
-
+            <h2 id="licensing">4️⃣ Licensing & Activation (6)</h2>
             <table>
                 <thead>
                     <tr>
@@ -241,65 +108,85 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><code>shellx linkx timeline</code></td>
-                        <td>View chronological history</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx linkx show &lt;id&gt;</code></td>
-                        <td>View specific entry</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx linkx search "&lt;query&gt;"</code></td>
-                        <td>Search history</td>
-                    </tr>
+                    <tr><td><code>shellx license status</code></td><td>Show license state</td></tr>
+                    <tr><td><code>shellx activate &lt;key&gt;</code></td><td>Activate license</td></tr>
+                    <tr><td><code>shellx deactivate</code></td><td>Remove license</td></tr>
+                    <tr><td><code>shellx trial status</code></td><td>Show trial state</td></tr>
+                    <tr><td><code>shellx trial reset</code></td><td>Reset trial</td></tr>
+                    <tr><td><code>shellx license verify</code></td><td>Validate license</td></tr>
                 </tbody>
             </table>
 
-            <h2 id="experimental">🧪 Experimental (V4 Roadmap)</h2>
-            <p>Coming in version 4.0.</p>
-
+            <h2 id="ide">5️⃣ IDE Integration (7)</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Command</th>
                         <th>Description</th>
-                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><code>shellx plugin install &lt;name&gt;</code></td>
-                        <td>Install plugin</td>
-                        <td>Planned</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx plugin list</code></td>
-                        <td>List installed plugins</td>
-                        <td>Planned</td>
-                    </tr>
-                    <tr>
-                        <td><code>shellx engine status</code></td>
-                        <td>View engine health</td>
-                        <td>Planned</td>
-                    </tr>
+                    <tr><td><code>shellx ide detect</code></td><td>Detect installed IDEs</td></tr>
+                    <tr><td><code>shellx ide list</code></td><td>List supported IDEs</td></tr>
+                    <tr><td><code>shellx ide open &lt;ide&gt;</code></td><td>Open project in IDE</td></tr>
+                    <tr><td><code>shellx ide vscode install</code></td><td>Install VS Code extensions</td></tr>
+                    <tr><td><code>shellx ide vscode tasks</code></td><td>Show VS Code tasks</td></tr>
+                    <tr><td><code>shellx ide config</code></td><td>Show IDE config</td></tr>
+                    <tr><td><code>shellx ide repair</code></td><td>Fix IDE integration</td></tr>
                 </tbody>
             </table>
 
-            <h2>✔ Command Summary</h2>
-            <p>ShellX commands fall into these categories:</p>
-            <ul>
-                <li><strong>Cognitive (V3)</strong> — Natural language interface</li>
-                <li><strong>Diagnostic (V2)</strong> — Individual worker control</li>
-                <li><strong>Core (V1)</strong> — Legacy commands</li>
-                <li><strong>Superman</strong> — All-in-one diagnostic</li>
-                <li><strong>LinkX</strong> — Memory & timeline</li>
-                <li><strong>Stones</strong> — Recovery & rollback</li>
-                <li><strong>Multi-Project</strong> — Cross-repo operations</li>
-                <li><strong>V4 Experimental</strong> — Plugin system</li>
-            </ul>
+            <h2 id="cognitive">6️⃣ Cognitive Modes (4)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>shellx --xx "&lt;intent&gt;"</code></td><td>XX Intent Processor (V3)</td></tr>
+                    <tr><td><code>shellx-superman "&lt;intent&gt;"</code></td><td>Multi-agent orchestration (V2)</td></tr>
+                    <tr><td><code>shellx deep-audit</code></td><td>Deep cognitive audit</td></tr>
+                    <tr><td><code>shellx architect</code></td><td>Architecture reasoning mode</td></tr>
+                </tbody>
+            </table>
 
-            <div style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1)); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin-top: 3rem;">
+            <h2 id="tools">7️⃣ Developer Tools (5)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>shellx debug</code></td><td>Debug ShellX internals</td></tr>
+                    <tr><td><code>shellx collect</code></td><td>Collect project metadata</td></tr>
+                    <tr><td><code>shellx look</code></td><td>Inspect project structure</td></tr>
+                    <tr><td><code>shellx memory</code></td><td>Show internal memory</td></tr>
+                    <tr><td><code>shellx autofix --safe</code></td><td>Safe auto-fix mode</td></tr>
+                </tbody>
+            </table>
+
+            <h2 id="multi">8️⃣ Multi-Project Commands (3)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>shellx multi scan</code></td><td>Scan multiple projects</td></tr>
+                    <tr><td><code>shellx multi link</code></td><td>Link multiple projects</td></tr>
+                    <tr><td><code>shellx multi "&lt;intent&gt;"</code></td><td>Multi-project intent mode</td></tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 2rem;"><strong>Total: 40 commands</strong></p>
+
+            <div style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1)); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin-top: 2rem;">
                 <h3 style="margin-bottom: 1rem;">💡 Pro Tip</h3>
                 <p style="margin: 0;">Use <code>shellx --xx</code> for 90% of tasks. It's the most powerful command and handles intent parsing, worker orchestration, and summary generation automatically.</p>
             </div>

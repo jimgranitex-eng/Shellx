@@ -17,54 +17,130 @@ ShellX is a goal‑driven cognitive developer engine that understands what you a
 
 ```bash
 npm install -g shellx-dev-cli
+shellx --version
 shellx linkx init
 shellx report
 ```
 
-## Commands
+## Usage Overview
 
-### Core Commands
+ShellX is a cognitive developer engine providing:
 
-| Command | Description |
-|---------|-------------|
-| `shellx "<intent>"` | Natural language intent (auto-detected) |
-| `shellx doctor` | Run main diagnostic flow |
-| `shellx launcher` | Run launcher flow |
-| `shellx preflight` | Fast alignment check |
-| `shellx daemon-once` | Supervised single cycle |
-| `shellx brain` | Repo sweep and candidate scan |
-| `shellx bridge` | Start local HTTP helper (experimental) |
-| `shellx report` | Run doctor and show latest report |
-| `shellx --xx "<intent>"` | Explicit cognitive mode (V3) |
-| `shellx-superman "<intent>"` | Full multi-agent diagnostic (V2) |
+- **Project memory** — LinkX persistent timeline
+- **Diagnostics** — Multi-agent audit & autofix
+- **IDE integration** — Detect, open, and manage 8 IDEs
+- **Licensing** — ShellX Pro activation & trial
+- **Cognitive reasoning** — Natural-language intent processing (V3)
+- **Snapshot management** — Stone recovery system
+- **Multi-project workflows** — Cross-repo context switching
 
-### LinkX Memory
+---
 
-| Command | Description |
-|---------|-------------|
-| `shellx linkx init` | Initialize LinkX memory |
-| `shellx linkx scan` | Scan project state into LinkX |
+## 📘 Full 40-Command Reference
 
-### Licensing (Pro)
+Commands are grouped into **8 categories**.  
+For detailed usage with examples, see [docs/Commands.md](docs/Commands.md).
+
+---
+
+### 1️⃣ Core Commands (7)
 
 | Command | Description |
 |---------|-------------|
-| `shellx activate <key>` | Activate ShellX Pro with license key |
-| `shellx deactivate` | Deactivate current license |
-| `shellx license status` | Show license status |
+| `shellx "<intent>"` | Natural-language intent (auto-detected) |
+| `shellx --help` | Show full help |
+| `shellx --version` | Show version |
+| `shellx init` | Initialize project |
+| `shellx verify` | System/environment check |
+| `shellx doctor` | Run diagnostic doctor |
+| `shellx report` | Generate full report |
 
-### IDE Integration
+### 2️⃣ LinkX Memory & Analysis (10)
+
+| Command | Description |
+|---------|-------------|
+| `shellx linkx init` | Create goal file |
+| `shellx linkx scan` | Scan project |
+| `shellx linkx show` | Show memory |
+| `shellx linkx timeline` | Timeline view |
+| `shellx linkx search` | Search memory |
+| `shellx linkx diff` | Compare memory states |
+| `shellx linkx export` | Export memory |
+| `shellx linkx import` | Import memory |
+| `shellx linkx purge` | Clear memory |
+| `shellx linkx rebuild` | Rebuild memory |
+
+### 3️⃣ Stone System (Project Snapshots) (5)
+
+| Command | Description |
+|---------|-------------|
+| `shellx stone list` | List stones |
+| `shellx stone show` | Show stone details |
+| `shellx stone diff` | Compare stones |
+| `shellx stone restore` | Restore snapshot |
+| `shellx stone create` | Create snapshot |
+
+### 4️⃣ Licensing & Activation (6)
+
+| Command | Description |
+|---------|-------------|
+| `shellx license status` | Show license state |
+| `shellx activate <key>` | Activate license |
+| `shellx deactivate` | Remove license |
+| `shellx trial status` | Show trial state |
+| `shellx trial reset` | Reset trial |
+| `shellx license verify` | Validate license |
+
+### 5️⃣ IDE Integration (7)
 
 | Command | Description |
 |---------|-------------|
 | `shellx ide detect` | Detect installed IDEs |
 | `shellx ide list` | List supported IDEs |
 | `shellx ide open <ide>` | Open project in IDE |
-| `shellx ide vscode <action>` | VS Code actions (open, install, info) |
+| `shellx ide vscode install` | Install VS Code extensions |
+| `shellx ide vscode tasks` | Show VS Code tasks |
+| `shellx ide config` | Show IDE config |
+| `shellx ide repair` | Fix IDE integration |
+
+### 6️⃣ Cognitive Modes (4)
+
+| Command | Description |
+|---------|-------------|
+| `shellx --xx "<intent>"` | XX Intent Processor (V3) |
+| `shellx-superman "<intent>"` | Multi-agent orchestration (V2) |
+| `shellx deep-audit` | Deep cognitive audit |
+| `shellx architect` | Architecture reasoning mode |
+
+### 7️⃣ Developer Tools (5)
+
+| Command | Description |
+|---------|-------------|
+| `shellx debug` | Debug ShellX internals |
+| `shellx collect` | Collect project metadata |
+| `shellx look` | Inspect project structure |
+| `shellx memory` | Show internal memory |
+| `shellx autofix --safe` | Safe auto-fix mode |
+
+### 8️⃣ Multi-Project Commands (3)
+
+| Command | Description |
+|---------|-------------|
+| `shellx multi scan` | Scan multiple projects |
+| `shellx multi link` | Link multiple projects |
+| `shellx multi "<intent>"` | Multi-project intent mode |
+
+---
+
+> **Total: 40 commands** — Implemented commands are available now; planned commands are marked as roadmap items in [docs/Commands.md](docs/Commands.md).
+
+---
 
 ## Supported IDEs
 
 VS Code, PyCharm, IntelliJ IDEA, WebStorm, Android Studio, Xcode, Sublime Text, Vim/Neovim
+
+---
 
 ## License
 
