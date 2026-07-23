@@ -5,6 +5,7 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/shellx-dev-cli"><img src="https://img.shields.io/npm/v/shellx-dev-cli" alt="npm"></a>
+  <a href="https://www.npmjs.com/package/shellx-dev-cli"><img src="https://img.shields.io/npm/dt/shellx-dev-cli" alt="npm downloads"></a>
   <a href="https://github.com/jimgranitex-eng/Shellx/actions"><img src="https://img.shields.io/github/actions/workflow/status/jimgranitex-eng/Shellx/ci.yml?branch=main" alt="CI"></a>
   <a href="https://github.com/jimgranitex-eng/Shellx/blob/main/LICENSE"><img src="https://img.shields.io/github/license/jimgranitex-eng/Shellx" alt="License"></a>
 </p>
@@ -20,6 +21,28 @@ npm install -g shellx-dev-cli
 shellx --version
 shellx linkx init
 shellx report
+```
+
+## Quick Examples
+
+```bash
+# Cognitive mode — describe what you want
+shellx --xx "stabilize the rendering pipeline"
+
+# Full multi-agent diagnostic
+shellx-superman "audit everything and fix issues"
+
+# Persistent project memory
+shellx linkx init && shellx linkx scan
+
+# IDE: detect + open in VS Code
+shellx ide detect && shellx ide open vscode
+
+# License status
+shellx license status
+
+# Recovery snapshot
+shellx stone list
 ```
 
 ## Usage Overview
@@ -144,7 +167,27 @@ VS Code, PyCharm, IntelliJ IDEA, WebStorm, Android Studio, Xcode, Sublime Text, 
 
 ## License
 
-- **ShellX (open source)** — [GNU GPL v3](LICENSE)
-- **ShellX Pro** — [Commercial license](LICENSE-PRO.md)
+ShellX uses a **dual-licensing model**:
 
-[Sponsor ShellX Pro on GitHub Sponsors](https://github.com/sponsors/jimgranitex-eng)
+```
+                    ┌───────────────────────┐
+                    │     ShellX Engine      │
+                    │  (all source code)     │
+                    └───────┬───────┬───────┘
+                            │       │
+                ┌───────────┘       └───────────┐
+                ▼                               ▼
+    ┌───────────────────────┐     ┌───────────────────────────┐
+    │   Open Source Edition │     │   ShellX Pro              │
+    │   Free for everyone   │     │   Commercial license      │
+    │   GNU GPL v3          │     │   Extra features + support│
+    │   Full CLI + LinkX    │     │   Superman Pro, deep audit,│
+    │   + Stones + IDE      │     │   enterprise tools,       │
+    │   + XX Mode           │     │   priority support        │
+    └───────────────────────┘     └───────────────────────────┘
+```
+
+- **ShellX (open source)** — [GNU GPL v3](LICENSE) — Use freely, modify, distribute under GPL terms.
+- **ShellX Pro** — [Commercial license](LICENSE-PRO.md) — Paid license with advanced features, enterprise tooling, and priority support.
+
+[Sponsor ShellX Pro on GitHub Sponsors](https://github.com/sponsors/jimgranitex-eng) — Get a Pro license and support ongoing development.
