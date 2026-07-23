@@ -82,10 +82,10 @@ def write_manual(event_type: str, summary: str, details: Dict) -> None:
 # ---------- LAYOUT SCAN ----------
 
 def scan_layout() -> Dict:
-    exe_candidates = find_files(PROJECT_ROOT, ["kickeros.exe", "kicker_os.exe"])
+    exe_candidates = find_files(PROJECT_ROOT, ["kickeros.exe", "kicker_os.exe", "KickerOS"])
     qml_dirs = find_dirs(PROJECT_ROOT, ["qml"])
     plugin_dirs = find_dirs(PROJECT_ROOT, ["plugins", "platforms"])
-    qt_core = find_files(PROJECT_ROOT, ["Qt6Core.dll", "Qt5Core.dll"])
+    qt_core = find_files(PROJECT_ROOT, ["Qt6Core.dll", "Qt5Core.dll", "libQt6Core.so", "libQt5Core.so"])
 
     layout = {
         "project_root": str(PROJECT_ROOT),

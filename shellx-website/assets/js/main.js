@@ -1,33 +1,10 @@
 // ShellX Website — Main JavaScript
-// Password protection and interactive elements
 
-// Password Gate Configuration
-const ACCESS_CODE = 'cognitive-engine-2026';
-const STORAGE_KEY = 'shellx_access_granted';
-
-// Check if user has already passed the gate
 document.addEventListener('DOMContentLoaded', function() {
-    const hasAccess = sessionStorage.getItem(STORAGE_KEY);
-    const gate = document.getElementById('password-gate');
-
-    if (hasAccess === 'true' && gate) {
-        gate.classList.add('hidden');
-    }
-
-    // Initialize smooth scrolling for anchor links
     initSmoothScrolling();
-
-    // Initialize code block copy buttons
     initCodeCopy();
-
-    // Initialize terminal typing animation
     initTerminalAnimation();
 });
-
-// Password Check Function
-function checkPassword() {
-    const input = document.getElementById('gate-password');
-    const gate = document.getElementById('password-gate');
 
     if (!input || !gate) return;
 

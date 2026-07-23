@@ -22,10 +22,12 @@ if env_roots:
 else:
     SEARCH_ROOTS = [Path(".")]
 
+import platform
+
 KEY_FILENAMES = {
-    "exe": ["KickerOS.exe"],
+    "exe": ["KickerOS.exe", "KickerOS", "kicker_os"],
     "qml": ["main.qml"],
-    "qt": ["Qt6Core.dll", "Qt6Quick.dll"],
+    "qt": ["Qt6Core.dll", "Qt6Quick.dll", "libQt6Core.so", "libQt6Quick.so"],
     "logs": [".log"],
     "stones": [".md"]
 }

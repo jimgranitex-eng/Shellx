@@ -37,20 +37,20 @@ function printHelp() {
   LINKX MEMORY:
     linkx init        Initialize LinkX memory
     linkx scan        Scan project state into LinkX
-    linkx show        Show memory
-    linkx timeline    Timeline view
-    linkx search      Search memory
-    linkx export      Export memory
-    linkx diff        Compare memory states
-    linkx import      Import memory
-    linkx purge       Clear memory
-    linkx rebuild     Rebuild memory
+    linkx show        Show memory           (planned)
+    linkx timeline    Timeline view         (planned)
+    linkx search      Search memory         (planned)
+    linkx export      Export memory         (planned)
+    linkx diff        Compare memory states (planned)
+    linkx import      Import memory         (planned)
+    linkx purge       Clear memory          (planned)
+    linkx rebuild     Rebuild memory        (planned)
 
   STONES:
     stone list        List stones
-    stone show        Show stone details
-    stone diff        Compare stones
-    stone restore     Restore snapshot
+    stone show        Show stone details    (planned)
+    stone diff        Compare stones        (planned)
+    stone restore     Restore snapshot      (planned)
     stone create      Create snapshot
 
   LICENSING:
@@ -59,23 +59,20 @@ function printHelp() {
     license status    Show license status
     trial status      Show trial state
     trial reset       Reset trial
-    license verify    Validate license
+    license verify    Validate license      (planned)
 
   IDE INTEGRATION:
     ide detect        Detect installed IDEs
     ide list          List supported IDEs
     ide open <ide>    Open project in IDE
     ide vscode install  Install VS Code extensions
-    ide vscode tasks  Show VS Code tasks
-    ide config        Show IDE config
-    ide repair        Fix IDE integration
+    ide vscode tasks  Show VS Code tasks    (planned)
+    ide config        Show IDE config       (planned)
+    ide repair        Fix IDE integration   (planned)
 
   COGNITIVE MODES:
     shellx --xx "<intent>"         XX Intent Processor (V3)
     shellx-superman "<intent>"     Multi-agent orchestration (V2)
-
-  SUPERMAN MODE:
-    shellx-superman "<intent>"     Full multi-agent diagnostic
 
   MORE INFO:
     See docs/Commands.md for the full 40-command reference with examples

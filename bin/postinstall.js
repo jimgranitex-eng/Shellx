@@ -8,10 +8,17 @@ const reqFile = path.join(bundleDir, 'requirements.txt');
 
 if (fs.existsSync(reqFile)) {
   console.log('ShellX: Installing Python dependencies...');
-  try {
-    execSync('pip install -r "' + reqFile + '"', { cwd: bundleDir, stdio: 'inherit' });
-    console.log('ShellX: Python dependencies installed');
-  } catch (e) {
-    console.warn('ShellX: Could not install Python deps (pip not found?). Run manually: pip install -r "' + reqFile + '"');
+  const pipCandidates = ['python3 -m pip', 'pip3', 'pip', 'python -m pip'];
+  let installed = false;
+  for (const pipCmd of pipCandidates) {
+    try {
+      execSync(pipCmd + ' install -r "' + reqFile + '"', { cwd: bundleDir, stdio: 'inherit' });
+      console.log('ShellX: Python dependencies installed');
+      installed = true;
+      break;
+    } catch {}
+  }
+  if (!installed) {
+    console.warn('ShellX: Could not install Python deps. Run manually: pip install -r "' + reqFile + '"');
   }
 }

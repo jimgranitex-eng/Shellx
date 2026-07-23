@@ -5,7 +5,7 @@ const { spawn } = require('child_process');
 const BUNDLE_DIR = path.join(__dirname, '..', 'bundle');
 
 function findPython() {
-  const candidates = ['py -3', 'python3', 'python'];
+  const candidates = ['python3', 'python', 'py -3'];
   for (const cmd of candidates) {
     try {
       require('child_process').execSync(cmd + ' --version', { stdio: 'ignore' });

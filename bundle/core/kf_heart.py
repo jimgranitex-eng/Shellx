@@ -37,7 +37,7 @@ def discover_project_layout() -> Dict:
     - all main QML entrypoints
     - all folders that look like build/dist variants
     """
-    exe_candidates = _find_candidates(["kickeros.exe", "kicker_os.exe"])
+    exe_candidates = _find_candidates(["kickeros.exe", "kicker_os.exe", "KickerOS"])
     qml_candidates = _find_candidates(["main.qml", "Main.qml"])
 
     build_like_dirs = []

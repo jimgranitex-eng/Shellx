@@ -1,4 +1,5 @@
 # ai_heart_doctor.py
+import os
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -159,16 +160,14 @@ def attempt_3_battle_plan(investigation_payload):
 
 
 MAX_AUTO_REWIRES = 4
-DEFAULT_QT_PATH = r"C:\Qt\6.11.0\mingw_64"
+DEFAULT_QT_PATH = r"C:\Qt\6.11.0\mingw_64" if os.name == "nt" else "/usr/lib/qt6"
 
 
 def propose_qt_root_candidates(timeline: dict, qt_status: dict, preferred_first: str = None):
     candidates = []
-    # prefer explicit preferred_first
     if preferred_first:
         candidates.append(preferred_first)
 
-    # collect from qt_status global_hits and past_dirs
     for info in qt_status.values():
         for d in info.get("past_dirs", []):
             if d and d not in candidates:
@@ -178,14 +177,20 @@ def propose_qt_root_candidates(timeline: dict, qt_status: dict, preferred_first:
             if p and p not in candidates:
                 candidates.append(p)
 
-    # add common C:\Qt subfolders if present
-    root = Path("C:/Qt")
-    if root.exists():
-        for child in root.iterdir():
-            if child.is_dir():
-                p = str(child)
-                if p not in candidates:
-                    candidates.append(p)
+    if os.name == "nt":
+        root = Path("C:/Qt")
+        if root.exists():
+            for child in root.iterdir():
+                if child.is_dir():
+                    p = str(child)
+                    if p not in candidates:
+                        candidates.append(p)
+    else:
+        for linux_root in ["/usr/lib/qt6", "/usr/lib/x86_64-linux-gnu/qt6", "/usr/local/qt6", os.environ.get("QTDIR", "")]:
+            if linux_root:
+                r = Path(linux_root)
+                if r.exists():
+                    candidates.append(str(r))
 
     return candidates
 

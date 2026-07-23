@@ -6,6 +6,7 @@ wires env vars (PATH/QML2_IMPORT_PATH/QT_PLUGIN_PATH) and launches the exe with
 cwd set to the exe folder. Drop at project root and run `python ai_heart_launcher.py`.
 """
 import os
+import sys
 import subprocess
 import time
 import shutil
@@ -54,7 +55,7 @@ def pick_latest(paths: List[Path]) -> Optional[Path]:
     return max(paths, key=lambda p: p.stat().st_mtime)
 
 def discover_runtime():
-    exe_candidates = find_files(PROJECT_ROOT, ["KickerOS.exe", "kicker_os.exe"])
+    exe_candidates = find_files(PROJECT_ROOT, ["KickerOS.exe", "KickerOS", "kicker_os"])
 
     # Prefer known runtime folders before falling back to newest binary.
     preferred_markers = [
@@ -76,10 +77,10 @@ def discover_runtime():
     if not exe:
         exe = pick_latest(exe_candidates)
 
-    qt_core_candidates = find_files(PROJECT_ROOT, ["Qt6Core.dll", "Qt5Core.dll"])
+    qt_core_candidates = find_files(PROJECT_ROOT, ["Qt6Core.dll", "Qt5Core.dll", "libQt6Core.so", "libQt5Core.so"])
     qt_bin_dir = None
     if exe:
-        for local_core in (exe.parent / "Qt6Core.dll", exe.parent / "Qt5Core.dll"):
+        for local_core in (exe.parent / "Qt6Core.dll", exe.parent / "Qt5Core.dll", exe.parent / "libQt6Core.so", exe.parent / "libQt5Core.so"):
             if local_core.exists():
                 qt_bin_dir = local_core.parent
                 break
@@ -240,7 +241,7 @@ except Exception:
 def start_grok_http_bridge():
     try:
         proc = subprocess.Popen(
-            ["python", str(PROJECT_ROOT / "tools" / "grok_http_bridge.py")],
+            [sys.executable, str(PROJECT_ROOT / "tools" / "grok_http_bridge.py")],
             cwd=str(PROJECT_ROOT),
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
@@ -500,7 +501,7 @@ if __name__ == "__main__":
     if AUTO_RUN_DOCTOR:
         try:
             print("[AI HEART] AUTO_RUN_DOCTOR is enabled — running AI Heart Doctor preflight...")
-            subprocess.run(["python", "-u", "ai_heart_doctor.py"], cwd=str(PROJECT_ROOT), check=False)
+            subprocess.run([sys.executable, "-u", "ai_heart_doctor.py"], cwd=str(PROJECT_ROOT), check=False)
         except Exception as e:
             print(f"[AI HEART] Failed to run preflight doctor: {e}")
 
