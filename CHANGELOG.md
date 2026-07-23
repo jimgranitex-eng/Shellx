@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
+## [3.2.1] — 2026-07-23
+
+### Added
+- **README — downloads badge** for npm total downloads
+- **README — license diagram** showing dual-licensing model (open source vs Pro)
+- **README — Quick Examples** section with 6 real-world command examples
+- **License key validation** — `SHELLX-PRO-XXXX-XXXX-XXXX` example key now rejected with friendly error message instead of generic "Invalid"
+
+### Changed
+- README badges expanded from 3 to 4 (added downloads)
+
+---
+
 ## [3.2.0] — 2026-07-23
 
 ### Fixed
