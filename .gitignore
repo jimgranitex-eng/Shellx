@@ -12,8 +12,6 @@ venv/
 bundle/.blackbox_runs/
 bundle/.quarantine/
 bundle/.reports/
-.shellx/goal.json
-.shellx/license.json
-.shellx/trial.json
+.shellx/
 bundle/activity_timeline.json
 bundle/LinkX_AI_Heart.md
