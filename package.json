@@ -1,0 +1,27 @@
+{
+  "name": "shellx-dev-cli",
+  "version": "1.0.0",
+  "description": "ShellX Cognitive Developer Engine — CLI",
+  "main": "index.js",
+  "bin": {
+    "shellx-dev-cli": "bin/shellx-dev-cli.js",
+    "shellx": "bin/shellx.js"
+  },
+  "scripts": {
+    "preflight": "node bin/shellx-dev-cli.js preflight",
+    "doctor": "node bin/shellx-dev-cli.js doctor",
+    "launcher": "node bin/shellx-dev-cli.js launcher",
+    "postinstall": "node bin/postinstall.js"
+  },
+  "keywords": ["shellx", "linkx", "ai", "developer-tools", "cognitive-engine"],
+  "author": "jimgranitex-eng",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimgranitex-eng/Shellx.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": ["win32", "darwin", "linux"]
+}

@@ -1,0 +1,21 @@
+{
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "shellx",
+          "title": "ShellX",
+          "icon": "media/shellx.svg"
+        }
+      ]
+    },
+    "views": {
+      "shellx": [
+        {
+          "id": "shellxView",
+          "name": "ShellX"
+        }
+      ]
+    }
+  }
+}

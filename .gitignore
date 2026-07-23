@@ -1,0 +1,15 @@
+node_modules/
+__pycache__/
+*.pyc
+.Python
+env/
+venv/
+.env
+*.zip
+*.pdf
+*.jpg
+*.png
+bundle/.blackbox_runs/
+bundle/.quarantine/
+bundle/.reports/
+.shellx/goal.json

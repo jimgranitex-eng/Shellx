@@ -1,0 +1,11 @@
+ShellX Portable Bundle
+Date: 2026-04-14
+Source workspace: D:/KickerOS
+Purpose: portable ShellX toolkit for reuse in VS Code or other coding environments.
+
+Included groups:
+- core ShellX scripts
+- bridge and browser helpers
+- reusable VS Code snippets
+- quick-start docs
+- full operations guide

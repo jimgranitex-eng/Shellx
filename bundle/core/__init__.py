@@ -1,0 +1,1 @@
+# ShellX portable core package
