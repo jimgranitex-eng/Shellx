@@ -1,6 +1,6 @@
 {
   "name": "shellx-dev-cli",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "ShellX Cognitive Developer Engine — goal-driven CLI with LinkX memory, IDE integration, and multi-agent diagnostics",
   "main": "index.js",
   "bin": {
