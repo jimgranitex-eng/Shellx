@@ -319,15 +319,19 @@ test('package.json has cross-platform os field', () => {
   if (!p.os || p.os.length < 3) throw new Error('Missing cross-platform os field');
 });
 
-test('npmignore exists and excludes git and node_modules', () => {
-  const ni = fs.readFileSync(path.join(__dirname, '..', '.npmignore'), 'utf8');
+test('npmignore exists and excludes git and node_modules (check from repo)', () => {
+  const repoRoot = path.resolve(__dirname, '..');
+  const npmignorePath = path.join(repoRoot, '.npmignore');
+  if (!fs.existsSync(npmignorePath)) throw new Error('.npmignore missing from repo');
+  const ni = fs.readFileSync(npmignorePath, 'utf8');
   if (!ni.includes('.git')) throw new Error('.npmignore missing .git');
   if (!ni.includes('node_modules')) throw new Error('.npmignore missing node_modules');
 });
 
-test('gitignore exists', () => {
-  const gi = path.join(__dirname, '..', '.gitignore');
-  if (!fs.existsSync(gi)) throw new Error('.gitignore missing');
+test('gitignore exists (check from repo)', () => {
+  const repoRoot = path.resolve(__dirname, '..');
+  const gi = path.join(repoRoot, '.gitignore');
+  if (!fs.existsSync(gi)) throw new Error('.gitignore missing from repo');
 });
 
 // ===========================
