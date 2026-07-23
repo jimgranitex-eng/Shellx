@@ -1,16 +1,20 @@
 {
   "name": "shellx-dev-cli",
-  "version": "3.0.2",
-  "description": "ShellX Cognitive Developer Engine — CLI",
+  "version": "3.1.0",
+  "description": "ShellX Cognitive Developer Engine — goal-driven CLI with LinkX memory, IDE integration, and multi-agent diagnostics",
   "main": "index.js",
   "bin": {
+    "shellx": "bin/shellx.js",
     "shellx-dev-cli": "bin/shellx-dev-cli.js",
-    "shellx": "bin/shellx.js"
+    "shellx-superman": "bin/shellx-superman.js"
   },
   "scripts": {
     "preflight": "node bin/shellx-dev-cli.js preflight",
     "doctor": "node bin/shellx-dev-cli.js doctor",
     "launcher": "node bin/shellx-dev-cli.js launcher",
+    "report": "node bin/shellx-dev-cli.js report",
+    "lint": "node bin/shellx-dev-cli.js preflight",
+    "test": "node bin/shellx-dev-cli.js doctor",
     "postinstall": "node bin/postinstall.js"
   },
   "keywords": [
@@ -18,7 +22,9 @@
     "linkx",
     "ai",
     "developer-tools",
-    "cognitive-engine"
+    "cognitive-engine",
+    "ide",
+    "licensing"
   ],
   "author": "jimgranitex-eng",
   "license": "GPL-3.0",

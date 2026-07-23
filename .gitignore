@@ -13,3 +13,5 @@ bundle/.blackbox_runs/
 bundle/.quarantine/
 bundle/.reports/
 .shellx/goal.json
+.shellx/license.json
+.shellx/trial.json

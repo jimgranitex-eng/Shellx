@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: node bin/shellx-dev-cli.js --help
+      - run: node bin/shellx-dev-cli.js preflight
+      - run: node bin/shellx-superman.js --help 2>&1 || true
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: node -e "const p=require('./package.json'); console.log('Version:', p.version); console.log('Bins:', Object.keys(p.bin).join(', '))"
+      - run: node bin/shellx-dev-cli.js linkx init
+      - run: node bin/shellx-dev-cli.js linkx scan
+      - run: node bin/shellx-dev-cli.js license status
+      - run: node bin/shellx-dev-cli.js ide list
+
+  publish:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
