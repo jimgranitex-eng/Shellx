@@ -20,10 +20,7 @@ env_roots = os.environ.get("AI_HEART_SEARCH_ROOTS")
 if env_roots:
     SEARCH_ROOTS = [Path(p) for p in env_roots.split(os.pathsep) if p]
 else:
-    SEARCH_ROOTS = [
-        Path("C:/"),
-        Path("D:/")
-    ]
+    SEARCH_ROOTS = [Path(".")]
 
 KEY_FILENAMES = {
     "exe": ["KickerOS.exe"],
@@ -39,15 +36,21 @@ def _find_files_by_name(name_list):
     results = []
     for root in SEARCH_ROOTS:
         for name in name_list:
-            for path in root.rglob(name):
-                results.append(path)
+            try:
+                for path in root.rglob(name):
+                    results.append(path)
+            except (FileNotFoundError, PermissionError, OSError):
+                continue
     return results
 
 def _find_files_by_extension(ext):
     results = []
     for root in SEARCH_ROOTS:
-        for path in root.rglob(f"*{ext}"):
-            results.append(path)
+        try:
+            for path in root.rglob(f"*{ext}"):
+                results.append(path)
+        except (FileNotFoundError, PermissionError, OSError):
+            continue
     return results
 
 def _get_latest(paths):
