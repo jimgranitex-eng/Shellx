@@ -6,6 +6,7 @@ const os = require('os');
 const CLI = path.join(__dirname, '..', 'bin', 'shellx-dev-cli.js');
 const SUPERMAN = path.join(__dirname, '..', 'bin', 'shellx-superman.js');
 const PKG = path.join(__dirname, '..', 'package.json');
+const PKG_VERSION = require(PKG).version;
 
 function tmp(name) {
   const d = fs.mkdtempSync(path.join(os.tmpdir(), `shellx-sound-${name}-`));
@@ -54,7 +55,7 @@ console.log('── Help & Info ──');
 
 test('--help shows banner with version', () => {
   const r = run(CLI, '--help');
-  assertContains(r.stdout, 'v3.1.0');
+  assertContains(r.stdout, `v${PKG_VERSION}`);
   assertContains(r.stdout, 'ShellX');
   assertContains(r.stdout, 'Cognitive Developer Engine');
 });

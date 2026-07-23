@@ -1,11 +1,35 @@
+# Git
 .git
+
+# Node
 node_modules
+
+# Runtime artifacts
 __pycache__
 *.pyc
 .env
+
+# Bundle runtime artifacts
 bundle/.blackbox_runs/
 bundle/.quarantine/
 bundle/.reports/
 bundle/__pycache__/
 bundle/activity_timeline.json
 bundle/LinkX_AI_Heart.md
+
+# Website (not needed at runtime — published separately via GitHub Pages)
+shellx-website/
+
+# Large assets (not needed at runtime)
+logo-shellx-v5.jpg
+*.pdf
+*.zip
+
+# Marketing / Pro documentation (not needed at runtime for open-source CLI)
+docs/
+
+# Test files (not needed at runtime)
+tests/
+
+# CI/CD configuration (not needed at runtime)
+.github/

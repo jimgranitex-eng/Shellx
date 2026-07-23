@@ -29,18 +29,6 @@ Private documentation and landing page for ShellX — the Cognitive Developer En
    - Add DNS record: CNAME `shellx` → `jimgranitex-eng.github.io`
    - Enable HTTPS in GitHub Pages settings
 
-### Private Access
-
-The site includes a password gate. Default access code:
-```
-cognitive-engine-2026
-```
-
-To change the password, edit `assets/js/main.js`:
-```javascript
-const ACCESS_CODE = 'your-new-code';
-```
-
 ### Structure
 
 ```
@@ -57,7 +45,7 @@ shellx-website/
 └── README.md               # This file
 ```
 
-## 🔒 Privacy Notes
+## Access Notes
 
 - Password gate is client-side JavaScript (basic obscurity)
 - For stronger protection, consider:

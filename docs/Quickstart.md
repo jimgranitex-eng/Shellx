@@ -22,10 +22,10 @@ cd Shellx
 npm install
 ```
 
-### Option 2 — Global install (coming soon)
+### Option 2 — Global install (recommended)
 
 ```bash
-npm install -g shellx
+npm install -g shellx-dev-cli
 ```
 
 ---
@@ -107,7 +107,7 @@ shellx activate SHELLX-PRO-XXXX-XXXX-XXXX
 
 ## Next Steps
 
-- [Commands Reference](../shellx-website/docs/commands.html)
+- [Commands Reference](../README.md#commands)
 - [Pro Features](Pro-Features.md)
 - [Pro FAQ](Pro-FAQ.md)
 - [Contributing](../CONTRIBUTING.md)

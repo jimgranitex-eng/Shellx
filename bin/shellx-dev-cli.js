@@ -5,6 +5,7 @@ const ide = require('../lib/ide');
 const xx = require('../lib/xx');
 const path = require('path');
 const fs = require('fs');
+const pkg = require('../package.json');
 
 const args = process.argv.slice(2);
 
@@ -12,7 +13,7 @@ function printHelp() {
   console.log(`
   ╔══════════════════════════════════════════╗
   ║   ShellX — Cognitive Developer Engine   ║
-  ║   v3.1.0                                ║
+  ║   v${pkg.version}${' '.repeat(34-pkg.version.length)}║
   ╚══════════════════════════════════════════╝
 
   USAGE:
@@ -49,7 +50,7 @@ function printHelp() {
     shellx report
     shellx linkx init
     shellx linkx scan
-    shellx activate PRO-XXXX-XXXX
+    shellx activate SHELLX-PRO-XXXX-XXXX-XXXX
     shellx ide detect
     shellx ide open vscode
     shellx --xx "stabilize the rendering pipeline"

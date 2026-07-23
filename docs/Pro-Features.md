@@ -27,6 +27,7 @@ The most powerful diagnostic mode in ShellX:
 
 ```bash
 shellx-superman-pro "full diagnostic and stabilize everything"
+# (Pro-only — available after activation)
 ```
 
 ---
