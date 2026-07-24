@@ -542,16 +542,16 @@ def build_fix_plan_from_investigation(
     }
     if exe_status == "misplaced":
         plan["recommended_actions"].append(
-            "KickerOS.exe: update launcher to point to the build directory where the EXE actually lives, "
+            "KickerOS: update launcher to point to the build directory where the executable actually lives, "
             "or rebuild into the active_build_root. " + exe_note
         )
     elif exe_status == "duplicate":
         plan["recommended_actions"].append(
-            "KickerOS.exe: choose a single authoritative build directory and update launcher / PATH accordingly. " + exe_note
+            "KickerOS: choose a single authoritative build directory and update launcher / PATH accordingly. " + exe_note
         )
     elif exe_status == "missing":
         plan["recommended_actions"].append(
-            "KickerOS.exe: rebuild the project to produce the executable in the active_build_root. " + exe_note
+            "KickerOS: rebuild the project to produce the executable in the active_build_root. " + exe_note
         )
 
     # ---- QML SECTION ----
@@ -665,7 +665,7 @@ def write_fix_plan_report(plan: dict, run_id: str = "attempt3_plan") -> str:
     lines.append("")
 
     # EXE
-    lines.append("### 2. EXECUTABLE (KickerOS.exe)")
+    lines.append("### 2. EXECUTABLE (KickerOS)")
     exe = plan.get("exe", {})
     lines.append(f"- Status: {exe.get('status', 'unknown')}")
     lines.append(f"- Note: {exe.get('note', '')}")

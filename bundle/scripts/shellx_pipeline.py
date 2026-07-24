@@ -50,7 +50,7 @@ def main():
     p.add_argument('--report-dir', default='build')
     p.add_argument('--target', help='path to write provided content to (optional)')
     p.add_argument('--content-file', help='file containing content to write to target (optional)')
-    p.add_argument('--run-exe', action='store_true', help='run dist\\KickerOS.exe after checks')
+    p.add_argument('--run-exe', action='store_true', help='run built application after checks')
     args = p.parse_args()
 
     report_dir = Path(args.report_dir)
@@ -100,16 +100,17 @@ def main():
 
     # run exe if requested
     if args.run_exe:
-        exe = Path('dist') / 'KickerOS.exe'
-        if exe.exists():
+        exe_candidates = [Path('dist') / n for n in ['KickerOS', 'KickerOS.exe', 'kicker_os.exe']]
+        found_exe = next((e for e in exe_candidates if e.exists()), None)
+        if found_exe:
             logp = report_dir / 'shellx_run.log'
             with open(logp, 'wb') as out:
-                print('Running exe:', exe)
-                proc = subprocess.Popen([str(exe)], stdout=out, stderr=subprocess.STDOUT)
+                print('Running:', found_exe)
+                proc = subprocess.Popen([str(found_exe)], stdout=out, stderr=subprocess.STDOUT)
                 proc.wait()
             print('WROTE', logp)
         else:
-            print('Exe not found:', exe)
+            print('Executable not found in dist/')
 
     # restore backup
     if backup and backup.exists():

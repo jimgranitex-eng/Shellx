@@ -160,7 +160,11 @@ if (mode === 'license') {
     }
     process.exit(0);
   }
-  console.log('Usage: shellx license status');
+  if (sub === 'verify') {
+    console.log('shellx license verify — not yet implemented (planned)');
+    process.exit(0);
+  }
+  console.log('Usage: shellx license status|verify');
   process.exit(1);
 }
 
@@ -233,7 +237,14 @@ if (mode === 'stone') {
     console.log('Stone created: ' + stone.id);
     process.exit(0);
   }
-  console.log('Usage: shellx stone list|show <id>|create [title]|diff <id>|restore <id>');
+  const plannedStones = { diff: 'stone diff <id>', restore: 'stone restore <id>' };
+  if (plannedStones[sub]) {
+    console.log('shellx ' + plannedStones[sub] + ' — not yet implemented (planned)');
+  } else if (sub === 'show') {
+    console.log('Usage: shellx stone show <id>');
+  } else {
+    console.log('Usage: shellx stone list|show <id>|create [title]|diff <id>|restore <id>');
+  }
   process.exit(1);
 }
 
@@ -259,8 +270,14 @@ if (pythonModes.includes(mode)) {
       console.log('LinkX scan — analyzing project state...');
       run('preflight');
       break;
-    default:
-      console.log('Usage: shellx linkx init|scan|show|timeline|search|export|diff|import|purge|rebuild');
+    default: {
+      const planned = ['show','timeline','search','export','diff','import','purge','rebuild'];
+      if (planned.includes(sub)) {
+        console.log('shellx linkx ' + sub + ' — not yet implemented (planned)');
+      } else {
+        console.log('Usage: shellx linkx init|scan|show|timeline|search|export|diff|import|purge|rebuild');
+      }
+    }
   }
 } else {
   console.log('Unknown command: ' + mode);
